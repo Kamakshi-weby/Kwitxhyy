@@ -246,9 +246,9 @@ Temporary.</p>
     </ul>
   </section>  <section class="spotify">
     <h2>🔮 Some Creepy Vibes</h2>
-    <p><em>🧪 This playlist was brewed under a blood moon with ghostly hands and glittering shadows. It’s not just music — it’s a spell. Press play and vanish. 💫👻</p>
+    <p><em>🧪 This playlist was brewed under a blood moon with ghostly hands and glittering shadows. It’s not just music — it’s a spell. Press play and vanish. 💫👻 
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Pg4aIDGiFGKhgAfwDa3b3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section> 
+  
   <footer class="adios"><footer style="text-align:center; padding: 50px 20px; background: linear-gradient(90deg, #0b0019, #1e0033); color: violet; font-family: 'Creepster', cursive; font-size: 22px; letter-spacing: 2px; text-shadow: 2px 2px 6px purple;">
  <h2>🌙 Adios</h2>
     <p>Thank you for exploring my little spooky world! This was just a witchy beginning — more chaos, more spells, and more stories will brew soon. Stay weird, stay magical. ✨👾💀<br />
