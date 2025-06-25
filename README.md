@@ -243,12 +243,8 @@ Temporary.</p>
   </section> 
   <div id="secretTrigger" style="margin: 60px auto; text-align: center;">
   <p style="color: #999;">⚠️ <span onclick="triggerScare()" style="cursor: pointer; text-decoration: underline;">Do not click this</span></p>
-  <img id="scareImage" src="https://i.imgur.com/PlDPTRm.png" alt="scary" style="display: none; max-width: 200px;" />
+  <img id="scareImage" src="Horror.jpg" alt="scary" style="display: none; max-width: 200px;" />
   </div>
-  <section id="weather" class="weather-widget">
-  <h2 class="spooky-heading">🌫️ Witch's Weather</h2>
-  <p id="weatherInfo">Summoning current conditions...</p>
-</section>
   <section id="games" class="games"><div id="scavenger-hunt" class="hunt-box">
   <h2 class="spooky-heading">🕷️ Scavenger Hunt</h2>
   <p>Find all the hidden spell ingredients scattered around this section:</p>
@@ -500,42 +496,6 @@ Temporary.</p>
     const message = options[Math.floor(Math.random() * options.length)];
     result.innerText = message;
   }
-</script><script>
-  async function getWeather() {
-    if (!navigator.geolocation) {
-      document.getElementById("weatherInfo").innerText = "Location magic is blocked!";
-      return;
-    }
-
-    navigator.geolocation.getCurrentPosition(async (position) => {
-      const lat = position.coords.latitude;
-      const lon = position.coords.longitude;
-
-      const apiKey = "4a5f0a69069feb664deffa2282ce8b2c";
-      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
-
-      const response = await fetch(url);
-      const data = await response.json();
-
-      const temp = data.main.temp;
-      const condition = data.weather[0].main.toLowerCase();
-
-      let spookyDescription = "";
-
-      if (condition.includes("rain")) spookyDescription = "🌧️ The skies weep. Perfect for dark rituals.";
-      else if (condition.includes("cloud")) spookyDescription = "☁️ Shadows above... a good day for quiet spells.";
-      else if (condition.includes("clear")) spookyDescription = "🌞 Clear skies... but something hides behind the sun.";
-      else if (condition.includes("snow")) spookyDescription = "❄️ Frozen winds whisper secrets from beyond.";
-      else spookyDescription = "🌫️ The air is strange today. Cast with caution.";
-
-      document.getElementById("weatherInfo").innerText =
-        `It’s ${temp}°C where you are. ${spookyDescription}`;
-    }, () => {
-      document.getElementById("weatherInfo").innerText = "Couldn’t divine your location… blocked by a charm?";
-    });
-  }
-
-  getWeather();
 </script>
 <script>
   const foundItems = {
