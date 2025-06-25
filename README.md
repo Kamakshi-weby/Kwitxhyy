@@ -241,7 +241,7 @@ Temporary.</p>
       <p id="witchResult"></p>
     </div>
   </section> 
-  <div id="secretTrigger" style="margin: 60px auto; text-align: center;">
+  <div id="secretTrigger" style="margin: 120px auto; text-align: center;">
   <p style="color: #999;">⚠️ <span onclick="triggerScare()" style="cursor: pointer; text-decoration: underline;">Do not click this</span></p>
   <img id="scareImage" src="Horror.jpg" alt="scary" style="display: none; max-width: 200px;" />
   </div>
