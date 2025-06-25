@@ -331,14 +331,10 @@ Temporary.</p>
   <div id="scareContainer">
     <img
       id="scareImage"
-      src="https://i.imgur.com/s5YjEKa.png"
+      src="Horror.jpg"
       alt="Scary Face"
     />
-    <img
-      id="bloodFlash"
-      src="https://i.imgur.com/R98IOaK.png"
-      alt="Blood Splatter"
-    />
+
   </div>
   </div>
 
