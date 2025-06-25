@@ -338,21 +338,7 @@ Temporary.</p>
   </div>
   </div>
 
-  <section id="games" class="games"><div id="scavenger-hunt" class="hunt-box">
-  <h2 class="spooky-heading">🕷️ Scavenger Hunt</h2>
-  <p>Find all the hidden spell ingredients scattered around this section:</p>
-  <ul id="hunt-list">
-    <li id="bone">☠️ Bone Dust</li>
-    <li id="vial">🧪 Crystal Vial</li>
-    <li id="herb">🌿 Cursed Herb</li>
-  </ul>
-  <p id="hunt-message" style="color: lime; font-weight: bold;"></p>
-
-  <!-- Hidden items (clickable!) -->
-  <img src="https://i.imgur.com/hJYZ4dO.png" id="item-bone" class="hunt-item" title="Bone Dust" />
-  <img src="https://i.imgur.com/l6LKCGp.png" id="item-vial" class="hunt-item" title="Crystal Vial" />
-  <img src="https://i.imgur.com/3zLKDkA.png" id="item-herb" class="hunt-item" title="Cursed Herb" />
-</div>
+  <section id="games" class="games">
     <h2>🕹️ Witchy Games</h2>
     <div class="game-box">
       <h3>🃏 Tarot Card Generator</h3>
@@ -592,32 +578,4 @@ Temporary.</p>
     const message = options[Math.floor(Math.random() * options.length)];
     result.innerText = message;
   }
-</script>
-<script>
-  const foundItems = {
-    bone: false,
-    vial: false,
-    herb: false
-  };
-
-  function checkWin() {
-    if (foundItems.bone && foundItems.vial && foundItems.herb) {
-      document.getElementById("hunt-message").innerText =
-        "✨ You completed the Spell of Shadows!";
-    }
-  }
-
-  window.onload = () => {
-    const items = ["bone", "vial", "herb"];
-    items.forEach(id => {
-      const img = document.getElementById("item-" + id);
-      img.style.display = "block";
-      img.addEventListener("click", () => {
-        foundItems[id] = true;
-        img.style.display = "none";
-        document.getElementById(id).classList.add("found");
-        checkWin();
-      });
-    });
-  };
 </script>
