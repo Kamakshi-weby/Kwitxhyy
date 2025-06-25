@@ -88,7 +88,90 @@
   text-decoration: line-through;
   color: lime;
 }
-  </style>
+#scareContainer {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+#scareContainer img {
+  max-width: 80%;
+  max-height: 80%;
+  box-shadow: 0 0 30px red;
+  animation: pulse 0.5s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+} 
+#scareContainer {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  animation: shake 0.3s ease-in-out infinite;
+}
+
+#scareImage {
+  max-width: 80%;
+  max-height: 80%;
+  animation: pulse 0.5s infinite alternate;
+  z-index: 10001;
+}
+
+#bloodFlash {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 10000;
+  display: none;
+  animation: flash 0.5s ease;
+}
+
+@keyframes pulse {
+  from { transform: scale(1); }
+  to { transform: scale(1.05); }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0; }
+}
+</style>
 </head>
 <body>
   <nav>
@@ -241,10 +324,24 @@ Temporary.</p>
       <p id="witchResult"></p>
     </div>
   </section> 
-  <div id="secretTrigger" style="margin: 120px auto; text-align: center;">
-  <p style="color: #999;">⚠️ <span onclick="triggerScare()" style="cursor: pointer; text-decoration: underline;">Do not click this</span></p>
-  <img id="scareImage" src="Horror.jpg" alt="scary" style="display: none; max-width: 200px;" />
+  <div id="secretTrigger" style="text-align: center; margin: 60px 0;">
+  <p style="color: #999;">
+    ⚠️ <span onclick="triggerScare()" style="cursor: pointer; text-decoration: underline;">Do not click this</span>
+  </p>
+  <div id="scareContainer">
+    <img
+      id="scareImage"
+      src="https://i.imgur.com/s5YjEKa.png"
+      alt="Scary Face"
+    />
+    <img
+      id="bloodFlash"
+      src="https://i.imgur.com/R98IOaK.png"
+      alt="Blood Splatter"
+    />
   </div>
+  </div>
+
   <section id="games" class="games"><div id="scavenger-hunt" class="hunt-box">
   <h2 class="spooky-heading">🕷️ Scavenger Hunt</h2>
   <p>Find all the hidden spell ingredients scattered around this section:</p>
@@ -408,14 +505,17 @@ Temporary.</p>
 </script>
 <script>
   function triggerScare() {
-    const img = document.getElementById("scareImage");
-    img.style.display = "block";
+    const scare = document.getElementById("scareContainer");
+    const blood = document.getElementById("bloodFlash");
+    scare.style.display = "flex";
+    blood.style.display = "block";
 
     const scream = new Audio("https://www.myinstants.com/media/sounds/wilhelm-scream.mp3");
     scream.play();
 
     setTimeout(() => {
-      img.style.display = "none";
+      scare.style.display = "none";
+      blood.style.display = "none";
     }, 3000);
   }
 </script>
