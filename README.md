@@ -81,11 +81,11 @@
     <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
   </section>  <section id="about" class="about">
     <h2>About Me</h2>
-    <img src="IMG-20250625-WA0000.jpg" alt="About image" class="small-img" />
+    <img src="file_0000000094d461f5a206b05a4e4ec2ed.png.jpg" alt="About image" class="small-img" />
     <p>I'm <strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
   </section>  <section id="myself" class="myself">
     <h2>This Witchy</h2>
-    <img src="IMG-20250625-WA0001.jpg" alt="Myself image" class="small-img" />
+    <img src="5A6ABF91B5E13A4E907FE5B2CDCA7C31F748AD45" alt="Myself image" class="small-img" />
     <p>Hi there! I'm Kamakshi and this is my first time creating a website where I blog and maybe live. About myself I'm 18 and I'm very much interested in gaming and doing nothing but also a little bit of coding. I love making friends, and in person I maybe an extrovert but I'm not much confident if you ask me but that's ok. That's how life works right!?. I might not be perfect and neither is this website but I hope y'all like it 😄. Thanks for being here. Toodles!</p>
   </section>  <section id="blogs" class="blogs">
     <h2>Blogs</h2>
@@ -198,11 +198,15 @@ Temporary.</p>
   </section>  <section id="quiz" class="quiz">
     <h2>🔮 What Kind of Witch Are You?</h2>
     <div class="quiz-box">
-      <p><strong>Q1:</strong> What time of day do you feel most alive?</p>
-      <input type="radio" name="q1" value="forest" /> Dawn<br />
-      <input type="radio" name="q1" value="storm" /> Stormy Afternoon<br />
-      <input type="radio" name="q1" value="shadow" /> Midnight<br />
-      <br />
+      <p><strong>Q1:</strong> What time of day or place calls to your soul?</p>
+<input type="radio" name="q1" value="forest" /> A misty forest at dawn 🌲<br />
+<input type="radio" name="q1" value="storm" /> Thunderstorms in the evening 🌩️<br />
+<input type="radio" name="q1" value="shadow" /> Midnight shadows 🌑<br />
+<input type="radio" name="q1" value="fire" /> Blazing sunlight and fire rituals 🔥<br />
+<input type="radio" name="q1" value="ice" /> Snow-covered silence ❄️<br />
+<input type="radio" name="q1" value="sea" /> Waves crashing at night 🌊<br />
+<input type="radio" name="q1" value="bone" /> Dusty bones and forgotten whispers 🦴<br />
+<input type="radio" name="q1" value="cosmic" /> Stargazing from your window 💫<br />
       <button onclick="getWitchResult()">Reveal My Witch Type</button>
       <p id="witchResult"></p>
     </div>
@@ -233,26 +237,38 @@ Temporary.</p>
       <li>🌝 Full Moon – 21 July 2025</li>
       <li>🔮 Mercury Retrograde – 5 Aug to 28 Aug 2025</li>
       <li>🌑 New Moon – 4 August 2025</li>
+      <li>🕯️ Witch's Market – 13 July 2025</li>
+<li>💀 Ancestor Night – 31 October 2025</li>
+<li>🧛 Blood Moon Eclipse – 8 November 2025</li>
+<li>🎃 Samhain Festival – 31 October 2025</li>
+<li>📿 Dark Spirit Portal Opening – 21 December 2025</li>
+<li>🔔 Hex Hour – Every Friday the 13th</li>
     </ul>
   </section>  <section class="spotify">
     <h2>🔮 Some Creepy Vibes</h2>
     <p><em>Music for vibing in shadows, coding in candlelight or just being a baddie in black 🖤</em><br />
     Hit play... if you're brave enough.</p>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Pg4aIDGiFGKhgAfwDa3b3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-  </section>  <footer class="adios">
-    <h2>🌙 Adios</h2>
+  </section> 
+  <footer class="adios"><footer style="text-align:center; padding: 50px 20px; background: linear-gradient(90deg, #0b0019, #1e0033); color: violet; font-family: 'Creepster', cursive; font-size: 22px; letter-spacing: 2px; text-shadow: 2px 2px 6px purple;">
+ <h2>🌙 Adios</h2>
     <p>Thank you for exploring my little spooky world! This was just a witchy beginning — more chaos, more spells, and more stories will brew soon. Stay weird, stay magical. ✨👾💀<br />
-    Adios, fellow night dweller!</p>
+    Adios, fellow night crawlers!</p>
   </footer>  <script>
     function getWitchResult() {
       const val = document.querySelector('input[name="q1"]:checked');
       if (!val) return alert("Choose an answer!");
       const type = val.value;
       const types = {
-        forest: "🌲 You're a Forest Witch! Connected with nature and earthy wisdom.",
-        storm: "🌩️ You're a Storm Witch! Bold, unpredictable, and full of electric power.",
-        shadow: "🌑 You're a Shadow Witch! Deep, mysterious, and emotionally intense."
-      };
+  forest: "🌲 You're a Forest Witch! You draw power from nature and earth spirits.",
+  storm: "🌩️ You're a Storm Witch! You thrive in chaos, change, and lightning strikes.",
+  shadow: "🌑 You're a Shadow Witch! You're mysterious, deep, and see the unseen.",
+  fire: "🔥 You're a Fire Witch! Passionate, fierce, and born to lead.",
+  ice: "❄️ You're an Ice Witch! Calm, elegant, and unshakably in control.",
+  sea: "🌊 You're a Sea Witch! Emotions, tides, and the unknown call to you.",
+  bone: "🦴 You're a Bone Witch! Wise, ancient, connected to the spirit realm.",
+  cosmic: "💫 You're a Cosmic Witch! You read stars and dream with galaxies."
+};
       document.getElementById("witchResult").innerText = types[type];
     }
 
@@ -280,8 +296,28 @@ Temporary.</p>
     }
 
     function makePotion() {
-      const results = ["Potion of Eternal Confidence", "Love Elixir", "Invisibility Draught", "Truth Serum"];
+     const results = [
+  "Potion of Eternal Confidence",
+  "Love Elixir",
+  "Invisibility Draught",
+  "Truth Serum",
+  "Witch's Brew of Misfortune",
+  "Serpent's Tongue Serum",
+  "Liquid Luck (Felix Felicis)",
+  "Memory Mist",
+  "Nightmare Nectar",
+  "Dragon’s Breath Potion",
+  "Potion of Shapeshifting",
+  "Ghost Whisper Tonic",
+  "Elixir of Time Freeze",
+  "Poison of Eternal Sleep",
+  "Soul Binding Vial",
+  "Potion of Endless Night",
+  "Spider Silk Serum",
+  "Moonlight Elixir",
+  "Goblin Gigglegoo",
+  "Cauldron of Curses"
+]; 
       document.getElementById("potionResult").innerText = `You brewed: ${results[Math.floor(Math.random() * results.length)]}`;
     }
   </script></body>
-</html>
