@@ -63,6 +63,31 @@
       border: 2px solid purple;
       border-radius: 10px;
     }
+    .hunt-box {
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #1a001a;
+  border: 2px dashed violet;
+  color: white;
+  position: relative;
+}
+
+.hunt-item {
+  width: 40px;
+  position: absolute;
+  cursor: pointer;
+  display: none;
+  z-index: 10;
+}
+
+#item-bone { top: 120px; left: 60px; }
+#item-vial { top: 200px; left: 300px; }
+#item-herb { top: 350px; left: 180px; }
+
+.hunt-box ul li.found {
+  text-decoration: line-through;
+  color: lime;
+}
   </style>
 </head>
 <body>
@@ -195,7 +220,12 @@ Maybe I was never meant
 to be anything
 but
 Temporary.</p>
-  </section>  <section id="quiz" class="quiz">
+  </section> <section id="mirror" class="spooky-mirror">
+  <h2 class="spooky-heading">🪞 Haunted Mirror</h2>
+  <p id="mirrorMessage">Peer into the mirror... what do you seek?</p>
+  <button onclick="talkToSpirit()">Speak to the Spirit</button>
+  </section>
+  <section id="quiz" class="quiz">
     <h2>🔮 What Kind of Witch Are You?</h2>
     <div class="quiz-box">
       <p><strong>Q1:</strong> What time of day or place calls to your soul?</p>
@@ -210,7 +240,30 @@ Temporary.</p>
       <button onclick="getWitchResult()">Reveal My Witch Type</button>
       <p id="witchResult"></p>
     </div>
-  </section>  <section id="games" class="games">
+  </section> 
+  <div id="secretTrigger" style="margin: 60px auto; text-align: center;">
+  <p style="color: #999;">⚠️ <span onclick="triggerScare()" style="cursor: pointer; text-decoration: underline;">Do not click this</span></p>
+  <img id="scareImage" src="https://i.imgur.com/PlDPTRm.png" alt="scary" style="display: none; max-width: 200px;" />
+  </div>
+  <section id="weather" class="weather-widget">
+  <h2 class="spooky-heading">🌫️ Witch's Weather</h2>
+  <p id="weatherInfo">Summoning current conditions...</p>
+</section>
+  <section id="games" class="games"><div id="scavenger-hunt" class="hunt-box">
+  <h2 class="spooky-heading">🕷️ Scavenger Hunt</h2>
+  <p>Find all the hidden spell ingredients scattered around this section:</p>
+  <ul id="hunt-list">
+    <li id="bone">☠️ Bone Dust</li>
+    <li id="vial">🧪 Crystal Vial</li>
+    <li id="herb">🌿 Cursed Herb</li>
+  </ul>
+  <p id="hunt-message" style="color: lime; font-weight: bold;"></p>
+
+  <!-- Hidden items (clickable!) -->
+  <img src="https://i.imgur.com/hJYZ4dO.png" id="item-bone" class="hunt-item" title="Bone Dust" />
+  <img src="https://i.imgur.com/l6LKCGp.png" id="item-vial" class="hunt-item" title="Crystal Vial" />
+  <img src="https://i.imgur.com/3zLKDkA.png" id="item-herb" class="hunt-item" title="Cursed Herb" />
+</div>
     <h2>🕹️ Witchy Games</h2>
     <div class="game-box">
       <h3>🃏 Tarot Card Generator</h3>
@@ -244,7 +297,29 @@ Temporary.</p>
 <li>📿 Dark Spirit Portal Opening – 21 December 2025</li>
 <li>🔔 Hex Hour – Every Friday the 13th</li>
     </ul>
-  </section>  <section class="spotify">
+  </section> 
+  <section id="horoscope" class="horoscope-section">
+  <h2 class="spooky-heading">🧿 Your Spooky Horoscope</h2>
+  <label for="sign">Choose your sign:</label>
+  <select id="sign">
+    <option value="">--Select--</option>
+    <option value="aries">♈ Aries</option>
+    <option value="taurus">♉ Taurus</option>
+    <option value="gemini">♊ Gemini</option>
+    <option value="cancer">♋ Cancer</option>
+    <option value="leo">♌ Leo</option>
+    <option value="virgo">♍ Virgo</option>
+    <option value="libra">♎ Libra</option>
+    <option value="scorpio">♏ Scorpio</option>
+    <option value="sagittarius">♐ Sagittarius</option>
+    <option value="capricorn">♑ Capricorn</option>
+    <option value="aquarius">♒ Aquarius</option>
+    <option value="pisces">♓ Pisces</option>
+  </select>
+  <button onclick="getSpookyHoroscope()">Reveal My Fate</button>
+  <p id="spookyResult" style="margin-top: 20px; color: violet; font-style: italic;"></p>
+  </section>
+  <section class="spotify">
     <h2>🔮 Some Creepy Vibes</h2>
     <p><em>🧪 This playlist was brewed under a blood moon with ghostly hands and glittering shadows. It’s not just music — it’s a spell. Press play and vanish. 💫👻 
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/1Pg4aIDGiFGKhgAfwDa3b3?utm_source=generator" width="100%" height="152" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
@@ -319,4 +394,174 @@ Temporary.</p>
 ]; 
       document.getElementById("potionResult").innerText = `You brewed: ${results[Math.floor(Math.random() * results.length)]}`;
     }
-  </script>
+  </script><script>
+  function talkToSpirit() {
+    const messages = [
+      "You are not alone... the spirits walk with you.",
+      "Your future is cloudy, but something stirs in the shadows.",
+      "Beware the full moon... it brings more than light.",
+      "A forgotten soul is watching. Are you ready to listen?",
+      "Your power grows stronger, but so does the danger.",
+      "You will soon meet someone... or something.",
+      "The mirror sees all — even what you try to hide."
+    ];
+    const mirror = document.getElementById("mirrorMessage");
+    const spirit = messages[Math.floor(Math.random() * messages.length)];
+    mirror.innerText = `"${spirit}"`;
+  }
+</script>
+<script>
+  function triggerScare() {
+    const img = document.getElementById("scareImage");
+    img.style.display = "block";
+
+    const scream = new Audio("https://www.myinstants.com/media/sounds/wilhelm-scream.mp3");
+    scream.play();
+
+    setTimeout(() => {
+      img.style.display = "none";
+    }, 3000);
+  }
+</script>
+<script>
+  const horoscopes = {
+    aries: [
+      "Aries, your flame burns bright tonight... but beware who follows its light.",
+      "Your courage may attract spirits. Burn sage at dusk.",
+      "A shadow has its eye on you. Be bold, but not careless."
+    ],
+    taurus: [
+      "Taurus, something old is clinging to your aura. Cleanse with earth and salt.",
+      "Your stubbornness will summon ancient energy. Are you ready to deal with it?",
+      "A creature walks where you once stood. It remembers you."
+    ],
+    gemini: [
+      "Two faces, two paths. One leads to light, the other to screams.",
+      "Speak less today. The spirits are listening.",
+      "Your reflection may answer before you do. Avoid mirrors."
+    ],
+    cancer: [
+      "The moon is whispering to you. Listen closely, but do not answer.",
+      "Your feelings summon more than just memories tonight.",
+      "Something watery wants to drag you under — emotionally or otherwise."
+    ],
+    leo: [
+      "You’re glowing... which means dark things are watching.",
+      "Pride may attract a challenge. A ghostly one.",
+      "Don’t roar too loud. It may wake what sleeps below."
+    ],
+    virgo: [
+      "You notice the patterns... but some were never meant to be seen.",
+      "Dust your corners. Something’s hiding behind the perfection.",
+      "Your logic won’t help when magic slips through the cracks."
+    ],
+    libra: [
+      "Balance is breaking. Tip too far, and you’ll see the veil tear.",
+      "You’ll be haunted by a choice. But which one?",
+      "Mirror magic surrounds you — don’t stare too long."
+    ],
+    scorpio: [
+      "Death isn’t the end for you today... it’s a beginning.",
+      "A secret you’ve buried is clawing its way out.",
+      "Your energy is magnetic — even to the dead."
+    ],
+    sagittarius: [
+      "Wander far, but don’t follow the voices.",
+      "You’ll find something lost. It may not want to be found.",
+      "A new path opens. But it smells of ash and blood."
+    ],
+    capricorn: [
+      "You're grounded — but something is trying to pull you down further.",
+      "Be cautious with time. The past wants you back.",
+      "Bones remember footsteps. Walk lighter today."
+    ],
+    aquarius: [
+      "Your visions grow clearer, but they may not be your own.",
+      "The air crackles. Something magical is reaching for you.",
+      "Dreams will deliver a message tonight. Do not ignore it."
+    ],
+    pisces: [
+      "You see beyond the veil — but something is staring back.",
+      "Water remembers. Don’t let it carry away your truth.",
+      "Tonight, your dreams become a door. Will you walk through?"
+    ]
+  };
+
+  function getSpookyHoroscope() {
+    const sign = document.getElementById("sign").value;
+    const result = document.getElementById("spookyResult");
+
+    if (!sign) {
+      result.innerText = "Please choose your zodiac sign, child of the stars...";
+      return;
+    }
+
+    const options = horoscopes[sign];
+    const message = options[Math.floor(Math.random() * options.length)];
+    result.innerText = message;
+  }
+</script><script>
+  async function getWeather() {
+    if (!navigator.geolocation) {
+      document.getElementById("weatherInfo").innerText = "Location magic is blocked!";
+      return;
+    }
+
+    navigator.geolocation.getCurrentPosition(async (position) => {
+      const lat = position.coords.latitude;
+      const lon = position.coords.longitude;
+
+      const apiKey = "4a5f0a69069feb664deffa2282ce8b2c";
+      const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+      const response = await fetch(url);
+      const data = await response.json();
+
+      const temp = data.main.temp;
+      const condition = data.weather[0].main.toLowerCase();
+
+      let spookyDescription = "";
+
+      if (condition.includes("rain")) spookyDescription = "🌧️ The skies weep. Perfect for dark rituals.";
+      else if (condition.includes("cloud")) spookyDescription = "☁️ Shadows above... a good day for quiet spells.";
+      else if (condition.includes("clear")) spookyDescription = "🌞 Clear skies... but something hides behind the sun.";
+      else if (condition.includes("snow")) spookyDescription = "❄️ Frozen winds whisper secrets from beyond.";
+      else spookyDescription = "🌫️ The air is strange today. Cast with caution.";
+
+      document.getElementById("weatherInfo").innerText =
+        `It’s ${temp}°C where you are. ${spookyDescription}`;
+    }, () => {
+      document.getElementById("weatherInfo").innerText = "Couldn’t divine your location… blocked by a charm?";
+    });
+  }
+
+  getWeather();
+</script>
+<script>
+  const foundItems = {
+    bone: false,
+    vial: false,
+    herb: false
+  };
+
+  function checkWin() {
+    if (foundItems.bone && foundItems.vial && foundItems.herb) {
+      document.getElementById("hunt-message").innerText =
+        "✨ You completed the Spell of Shadows!";
+    }
+  }
+
+  window.onload = () => {
+    const items = ["bone", "vial", "herb"];
+    items.forEach(id => {
+      const img = document.getElementById("item-" + id);
+      img.style.display = "block";
+      img.addEventListener("click", () => {
+        foundItems[id] = true;
+        img.style.display = "none";
+        document.getElementById(id).classList.add("found");
+        checkWin();
+      });
+    });
+  };
+</script>
