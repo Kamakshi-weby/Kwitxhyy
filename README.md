@@ -81,7 +81,7 @@
     <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
   </section>  <section id="about" class="about">
     <h2>About Me</h2>
-    <img src="file_0000000094d461f5a206b05a4e4ec2ed.png.jpg" alt="About image" class="small-img" />
+    <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
     <p>I'm <strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
   </section>  <section id="myself" class="myself">
     <h2>This Witchy</h2>
