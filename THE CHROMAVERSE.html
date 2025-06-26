@@ -1,163 +1,95 @@
 
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>The Chromaverse</title>
   <style>
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff6ec4, #7873f5, #47e5bc);
-      background-size: 600% 600%;
-      animation: gradientBG 15s ease infinite;
+      background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+      min-height: 100vh;
       color: #333;
     }
-
-    @keyframes gradientBG {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    header {
+    h1 {
       text-align: center;
-      padding: 2rem;
+      padding: 1.5rem;
       color: white;
-      text-shadow: 2px 2px 8px #000;
+      text-shadow: 2px 2px #000;
+      font-size: 3rem;
     }
-
-    .games-grid {
+    .game-container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 1.5rem;
       padding: 2rem;
     }
-
-    .game-card {
-      background-color: white;
-      border-radius: 20px;
+    .game {
+      background: white;
+      border-radius: 16px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      padding: 1rem;
+      overflow: hidden;
+    }
+    .game iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+    .adios-section {
+      background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
+      color: white;
+      padding: 4rem 1rem;
       text-align: center;
+      font-size: 1.6rem;
+      font-weight: bold;
+      text-shadow: 1px 1px 4px #000;
+    }
+    .back-link {
+      display: inline-block;
+      margin: 2rem auto;
+      padding: 1rem 2rem;
+      font-size: 1.2rem;
+      color: #fff;
+      background: #000;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 12px rgba(255,255,255,0.6);
       transition: transform 0.3s;
     }
-
-    .game-card:hover {
+    .back-link:hover {
       transform: scale(1.05);
-    }
-
-    iframe {
-      width: 100%;
-      height: 300px;
-      border: none;
-      border-radius: 12px;
-    }
-
-    .jokes-section {
-      background: #fffacd;
-      padding: 2rem;
-      font-size: 1.1rem;
-    }
-
-    .joke {
-      margin-bottom: 0.75rem;
-    }
-
-    .adios {
-      background: linear-gradient(to right, #ff416c, #ff4b2b);
-      color: white;
-      text-align: center;
-      padding: 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>🌈 Welcome to The Chromaverse 🌈</h1>
-    <p>Enter a world of colors, laughter, and interactive fun!</p>
-  </header>
 
-  <section class="games-grid">
-    <div class="game-card">
-      <h3>🎨 Paint Splash</h3>
-      <iframe src="https://kandinsky-paint.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🧩 Puzzle Pop</h3>
-      <iframe src="https://puzzle-party.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🕹️ Pixel Bounce</h3>
-      <iframe src="https://flappybird.io/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🎯 Color Shooter</h3>
-      <iframe src="https://shoot-the-color.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🧠 Memory Maze</h3>
-      <iframe src="https://memozor.com/memory-games/for-kids/animals/online-game"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🎈 Jelly Drop</h3>
-      <iframe src="https://sweet-drops.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🚀 Rainbow Run</h3>
-      <iframe src="https://color-road.github.io/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🌟 Star Catcher</h3>
-      <iframe src="https://stars-collector.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🍭 Lollipop Dash</h3>
-      <iframe src="https://lollipop-game.glitch.me/"></iframe>
-    </div>
-    <div class="game-card">
-      <h3>🐉 Dragon Hue</h3>
-      <iframe src="https://dragon-color.glitch.me/"></iframe>
-    </div>
-  </section>
+  <h1>🌈 The Chromaverse Awaits!</h1>
 
-  <section class="jokes-section">
-    <h2>🎉 Rainbow Jokes Zone 🎉</h2>
-    <div class="joke">Why did the crayon go to school? To draw some knowledge!</div>
-    <div class="joke">What do you call a colorful chicken? A rainbow cluck!</div>
-    <div class="joke">Why did the red paint blush? Because it saw the blue paint naked!</div>
-    <div class="joke">What’s a rainbow’s favorite type of music? Color pop!</div>
-    <div class="joke">Why are ghosts bad at lying? Because you can see right through them!</div>
-    <div class="joke">What do you call a bear with no teeth? A gummy bear!</div>
-    <div class="joke">Why was the math book sad? Because it had too many problems!</div>
-    <div class="joke">What’s orange and sounds like a parrot? A carrot!</div>
-    <div class="joke">What do you get when you cross a snowman and a vampire? Frostbite!</div>
-    <div class="joke">Why did the scarecrow win an award? Because he was outstanding in his field!</div>
-    <div class="joke">Why don't eggs tell jokes? Because they might crack up!</div>
-    <div class="joke">How do you organize a space party? You planet!</div>
-    <div class="joke">What do you call fake spaghetti? An impasta!</div>
-    <div class="joke">Why was Cinderella so bad at soccer? She kept running away from the ball!</div>
-    <div class="joke">What lights up a soccer stadium? A soccer match!</div>
-    <div class="joke">Why did the banana go to the doctor? It wasn’t peeling well!</div>
-    <div class="joke">Why did the golfer bring two pants? In case he got a hole in one!</div>
-    <div class="joke">Why do seagulls fly over the sea? Because if they flew over the bay, they’d be bagels!</div>
-    <div class="joke">Why don't skeletons fight each other? They don't have the guts.</div>
-    <div class="joke">What kind of shoes do ninjas wear? Sneakers!</div>
-    <div class="joke">Why was the computer cold? It left its Windows open!</div>
-    <div class="joke">What did one plate say to another? Lunch is on me!</div>
-    <div class="joke">Why did the bicycle fall over? Because it was two-tired!</div>
-    <div class="joke">How do cows stay up to date? They read the moos-paper!</div>
-    <div class="joke">Why are frogs so happy? They eat whatever bugs them!</div>
-    <div class="joke">What did the big flower say to the little flower? Hey, bud!</div>
-    <div class="joke">Why don't some couples go to the gym? Because some relationships don't work out!</div>
-    <div class="joke">What did the ocean say to the beach? Nothing, it just waved!</div>
-    <div class="joke">Why did the student eat his homework? Because his teacher told him it was a piece of cake!</div>
-    <div class="joke">Why did the cookie go to the hospital? Because it felt crummy!</div>
-  </section>
+  <div class="game-container">
+    <!-- Jopi embeds (reliable iframes) 2 -->
+    <div class="game"><iframe src="https://www.jopi.com/gam/summer-maze/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/key-quest/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/painting-tiles/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/space-slide/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/master-sudoku/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/way-to-home/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/paint-sponges-puzzle/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/pixel-mini-golf/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/neon-bricks/"></iframe></div>
+    <div class="game"><iframe src="https://www.jopi.com/gam/go-up-dash/"></iframe></div>
+    <!-- Spritted embeds – also iframe-compatible -->
+    <div class="game"><iframe src="https://spritted.com/embed/crushin-runner"></iframe></div>
+    <div class="game"><iframe src="https://spritted.com/embed/bombot.io"></iframe></div>
+    <div class="game"><iframe src="https://spritted.com/embed/capman.io"></iframe></div>
+    <div class="game"><iframe src="https://spritted.com/embed/physics-drop"></iframe></div>
+    <div class="game"><iframe src="https://spritted.com/embed/penguin-rescue-hero"></iframe></div>
+  </div>
 
-  <section class="adios">
-    <p>🎨 Thanks for playing in The Chromaverse! Until we color again... 🎨</p>
-  </section>
+  <div class="adios-section">
+    🎉 You've conquered 15 vibrant adventures in the Chromaverse! <br>
+    May the colors follow you wherever you go. Until next time... 🌟🌈
+  </div>
+
+  <a class="back-link" href="index.html">👻 Return to the Spooky Realm</a>
+
 </body>
-</html>
