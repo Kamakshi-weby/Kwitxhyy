@@ -785,11 +785,6 @@ And every day, I thank the universe that you’re mine.</p>
 
   </div>
   </div>
-
-
-  <canvas id="drawingCanvas" width="300" height="400"></canvas>
-</section>
-
   <section id="games" class="games">
     <h2>🕹️ Witchy Games</h2>
     <div class="game-box">
