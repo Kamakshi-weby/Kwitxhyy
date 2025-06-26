@@ -1,95 +1,108 @@
-
+<!DOCTYPE html><html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Chromaverse</title>
   <style>
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #ff00ff, #00ffff, #ffff00);
+      background: linear-gradient(135deg, #f0f, #0ff, #ff0);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       min-height: 100vh;
-      color: #333;
-    }
-    h1 {
-      text-align: center;
-      padding: 1.5rem;
-      color: white;
-      text-shadow: 2px 2px #000;
-      font-size: 3rem;
-    }
-    .game-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-      gap: 1.5rem;
-      padding: 2rem;
-    }
-    .game {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-      overflow: hidden;
-    }
-    .game iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-    }
-    .adios-section {
-      background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
-      color: white;
-      padding: 4rem 1rem;
-      text-align: center;
-      font-size: 1.6rem;
-      font-weight: bold;
-      text-shadow: 1px 1px 4px #000;
-    }
-    .back-link {
-      display: inline-block;
-      margin: 2rem auto;
-      padding: 1rem 2rem;
-      font-size: 1.2rem;
-      color: #fff;
-      background: #000;
-      border-radius: 10px;
-      text-decoration: none;
-      box-shadow: 0 0 12px rgba(255,255,255,0.6);
-      transition: transform 0.3s;
-    }
-    .back-link:hover {
-      transform: scale(1.05);
-    }
+    }h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.game-list a {
+  display: block;
+  width: 100%;
+  background: linear-gradient(to right, #ff66cc, #66ccff);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-list a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.adios-section {
+  margin-top: auto;
+  width: 100%;
+  background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px white;
+}
+
+.back-link:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 20px #fff;
+}
+
   </style>
 </head>
 <body>
-
-  <h1>🌈 The Chromaverse Awaits!</h1>
-
-  <div class="game-container">
-    <!-- Jopi embeds (reliable iframes) 2 -->
-    <div class="game"><iframe src="https://www.jopi.com/gam/summer-maze/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/key-quest/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/painting-tiles/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/space-slide/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/master-sudoku/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/way-to-home/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/paint-sponges-puzzle/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/pixel-mini-golf/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/neon-bricks/"></iframe></div>
-    <div class="game"><iframe src="https://www.jopi.com/gam/go-up-dash/"></iframe></div>
-    <!-- Spritted embeds – also iframe-compatible -->
-    <div class="game"><iframe src="https://spritted.com/embed/crushin-runner"></iframe></div>
-    <div class="game"><iframe src="https://spritted.com/embed/bombot.io"></iframe></div>
-    <div class="game"><iframe src="https://spritted.com/embed/capman.io"></iframe></div>
-    <div class="game"><iframe src="https://spritted.com/embed/physics-drop"></iframe></div>
-    <div class="game"><iframe src="https://spritted.com/embed/penguin-rescue-hero"></iframe></div>
-  </div>
-
-  <div class="adios-section">
-    🎉 You've conquered 15 vibrant adventures in the Chromaverse! <br>
-    May the colors follow you wherever you go. Until next time... 🌟🌈
-  </div>
-
-  <a class="back-link" href="index.html">👻 Return to the Spooky Realm</a>
+  <h1>🌈 Welcome to The Chromaverse</h1>  <div class="game-list">
+    <a href="https://www.jopi.com/gam/summer-maze/" target="_blank">🎮 Summer Maze</a>
+    <a href="https://www.jopi.com/gam/key-quest/" target="_blank">🗝️ Key Quest</a>
+    <a href="https://www.jopi.com/gam/painting-tiles/" target="_blank">🎨 Painting Tiles</a>
+    <a href="https://www.jopi.com/gam/space-slide/" target="_blank">🚀 Space Slide</a>
+    <a href="https://www.jopi.com/gam/master-sudoku/" target="_blank">🧠 Master Sudoku</a>
+    <a href="https://www.jopi.com/gam/way-to-home/" target="_blank">🏡 Way to Home</a>
+    <a href="https://www.jopi.com/gam/paint-sponges-puzzle/" target="_blank">🧽 Paint Sponges</a>
+    <a href="https://www.jopi.com/gam/pixel-mini-golf/" target="_blank">⛳ Pixel Mini Golf</a>
+    <a href="https://www.jopi.com/gam/neon-bricks/" target="_blank">🧱 Neon Bricks</a>
+    <a href="https://www.jopi.com/gam/go-up-dash/" target="_blank">⬆️ Go Up Dash</a>
+    <a href="https://spritted.com/embed/crushin-runner" target="_blank">🏃 Crushin Runner</a>
+    <a href="https://spritted.com/embed/bombot.io" target="_blank">💣 Bombot.io</a>
+    <a href="https://spritted.com/embed/capman.io" target="_blank">🧢 Capman.io</a>
+    <a href="https://spritted.com/embed/physics-drop" target="_blank">⚙️ Physics Drop</a>
+    <a href="https://spritted.com/embed/penguin-rescue-hero" target="_blank">🐧 Penguin Rescue Hero</a>
+  </div>  <div class="adios-section">
+    ✨ You've explored the realms of color and joy! <br>
+    🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖
+  </div><a class="back-link" href="index.html">👻 Back to the Spooky Realm</a>
 
 </body>
