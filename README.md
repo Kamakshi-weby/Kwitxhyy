@@ -1052,4 +1052,24 @@ And every day, I thank the universe that you’re mine.</p>
     menu.classList.toggle("active");
   });
 </script>
+<p style="text-align: center; font-family: 'Cursive'; font-size: 1.2rem; color: #fff;">
+  Ready to leave the shadows behind? Step into the light of The Chromaverse.
+</p>
+<div style="text-align: center; margin-top: 3rem; margin-bottom: 3rem;">
+  <a href="chromaverse.html">
+    <button style="
+      background: linear-gradient(to right, #ff00cc, #3333ff);
+      border: none;
+      padding: 14px 28px;
+      font-size: 18px;
+      color: white;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #ff00cc;
+      transition: transform 0.3s ease;
+    " onmouseover="this.style.transform='scale(1.1)'" onmouseout="this.style.transform='scale(1)'">
+      🌈 Enter The Chromaverse
+    </button>
+  </a>
+</div>
 
