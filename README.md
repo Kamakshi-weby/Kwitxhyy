@@ -624,7 +624,6 @@ canvas {
     <li><a href="#about">📜 About</a></li>
     <li><a href="#myself">🧙‍♀️ Myself</a></li>
     <li><a href="#blogs">📚 Blogs</a></li>
-    <li><a href="#canvas">🖌️ Canvas</a></li>
     <li><a href="#games">🎮 Games</a></li>
     <li><a href="#playlist">🎵 Playlist</a></li>
     <li><a href="#adios">🌙 Adios</a></li>
@@ -827,17 +826,7 @@ And every day, I thank the universe that you’re mine.</p>
 
   </div>
   </div>
-  <section id="canvas" class="cursed-canvas-section">
-  <h2>🩸 Cursed Canvas</h2>
 
-  <div class="controls">
-    <label>
-      Blood Ink Size:
-      <input type="range" id="brushSize" min="1" max="20" value="5">
-    </label>
-    <button id="clear">Clear</button>
-    <button id="save">Save Drawing</button>
-  </div>
 
   <canvas id="drawingCanvas" width="300" height="400"></canvas>
 </section>
@@ -1109,41 +1098,4 @@ And every day, I thank the universe that you’re mine.</p>
     menu.classList.toggle("active");
   });
 </script>
-<script>
-  const canvas = document.getElementById('drawingCanvas');
-  const ctx = canvas.getContext('2d');
-  let drawing = false;
 
-  canvas.addEventListener('mousedown', () => drawing = true);
-  canvas.addEventListener('mouseup', () => {
-    drawing = false;
-    ctx.beginPath(); // resets path to avoid sharp lines
-  });
-  canvas.addEventListener('mouseout', () => drawing = false);
-
-  canvas.addEventListener('mousemove', (e) => {
-    if (!drawing) return;
-    ctx.lineWidth = document.getElementById('brushSize').value;
-    ctx.lineCap = 'round';
-    ctx.strokeStyle = '#ff0033';
-    ctx.shadowColor = '#ff0033';
-    ctx.shadowBlur = 10;
-
-    ctx.lineTo(e.offsetX, e.offsetY);
-    ctx.stroke();
-    ctx.beginPath();
-    ctx.moveTo(e.offsetX, e.offsetY);
-  });
-
-  document.getElementById('clear').addEventListener('click', () => {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
-    ctx.beginPath();
-  });
-
-  document.getElementById('save').addEventListener('click', () => {
-    const link = document.createElement('a');
-    link.download = 'cursed_canvas.png';
-    link.href = canvas.toDataURL();
-    link.click();
-  });
-</script>
