@@ -3,109 +3,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>The Chromaverse</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --lazy1: #97B3AE;
+      --lazy2: #D2E0D3;
+      --lazy3: #F0DDD6;
+      --lazy4: #F2C3B9;
+      --lazy5: #D6CBBF;
+      --dream1: #C8CEEE;
+      --dream2: #FCDCE1;
+      --dream3: #E8DAF0;
+      --text: #333;
+    }
+    * { box-sizing: border-box; padding: 0; margin: 0; }
     body {
-      margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #f0f, #0ff, #ff0);
-      color: #222;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, var(--lazy1), var(--dream1), var(--dream3));
+      color: var(--text);
       min-height: 100vh;
-    }
-
-    h1 {
-      margin-top: 2rem;
-      font-size: 3rem;
-      text-align: center;
-      color: white;
-      text-shadow: 2px 2px 5px #000;
-    }
-
-    .game-list {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      gap: 1rem;
-      margin: 3rem 1rem;
-      width: 100%;
-      max-width: 700px;
     }
-
-    .game-list a {
-      display: block;
-      width: 100%;
-      background: linear-gradient(to right, #ff66cc, #66ccff);
+    header { text-align: center; padding: 2rem 1rem; }
+    header h1 {
+      font-family: 'Pacifico', cursive;
+      font-size: 3rem;
+      color: #6a4f93;
+    }
+    .game-list, .game-container { display: none; padding: 2rem; max-width: 960px; margin: auto; width: 100%; }
+    .active { display: block !important; }
+    .game-btn {
+      background: rgba(255, 255, 255, 0.8);
+      border: none;
+      border-radius: 16px;
       padding: 1rem;
-      text-align: center;
-      color: white;
-      text-decoration: none;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      font-weight: bold;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-      transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .game-list a:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,0,0,0.4);
-    }
-
-    .adios-section {
-      margin-top: auto;
-      width: 100%;
-      background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
-      color: white;
-      text-align: center;
-      padding: 3rem 2rem;
-      font-size: 1.5rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
-    }
-
-    .back-link {
-      display: inline-block;
-      margin-top: 2rem;
-      padding: 1rem 2rem;
-      background-color: black;
-      color: white;
-      text-decoration: none;
       font-size: 1.1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 15px white;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.2s ease;
+      cursor: pointer;
+      color: #333;
+      text-decoration: none;
+      margin-bottom: 1rem;
     }
-
-    .back-link:hover {
-      background: white;
-      color: black;
-      box-shadow: 0 0 20px #fff;
+    .game-btn:hover {
+      transform: scale(1.05);
+      background: rgba(255, 255, 255, 1);
+    }
+    footer {
+      margin-top: auto;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      background: rgba(255, 255, 255, 0.6);
     }
   </style>
 </head>
 <body>
-  <h1>🌈 Welcome to The Chromaverse</h1>
-
-  <div class="game-list">
-    <a href="https://www.jopi.com/gam/summer-maze/" target="_blank">🎮 Summer Maze</a>
-    <a href="https://www.jopi.com/gam/key-quest/" target="_blank">🗝️ Key Quest</a>
-    <a href="https://www.jopi.com/gam/painting-tiles/" target="_blank">🎨 Painting Tiles</a>
-    <a href="https://www.jopi.com/gam/space-slide/" target="_blank">🚀 Space Slide</a>
-    <a href="https://www.jopi.com/gam/master-sudoku/" target="_blank">🧠 Master Sudoku</a>
-    <a href="https://www.jopi.com/gam/way-to-home/" target="_blank">🏡 Way to Home</a>
-    <a href="https://www.jopi.com/gam/paint-sponges-puzzle/" target="_blank">🧽 Paint Sponges</a>
-    <a href="https://www.jopi.com/gam/pixel-mini-golf/" target="_blank">⛳ Pixel Mini Golf</a>
-    <a href="https://www.jopi.com/gam/neon-bricks/" target="_blank">🧱 Neon Bricks</a>
-    <a href="https://www.jopi.com/gam/go-up-dash/" target="_blank">⬆️ Go Up Dash</a>
-    <a href="https://spritted.com/embed/penguin-rescue-hero" target="_blank">🐧 Penguin Rescue Hero</a>
-  </div>
-
-  <div class="adios-section">
-    ✨ You've explored the realms of color and joy! <br>
+  <header>
+    <h1>🎮 Welcome to the Chromaverse</h1>
+    <p>Explore magical mini games in pastel wonder!</p>
+  </header>  <section class="game-list active" id="home">
+    <button class="game-btn" onclick="showGame('summer-maze')">🌞 Summer Maze</button>
+    <button class="game-btn" onclick="showGame('key-quest')">🗝️ Key Quest</button>
+    <button class="game-btn" onclick="showGame('painting-tiles')">🎨 Painting Tiles</button>
+    <button class="game-btn" onclick="showGame('space-slide')">🚀 Space Slide</button>
+    <button class="game-btn" onclick="showGame('master-sudoku')">🧠 Master Sudoku</button>
+    <button class="game-btn" onclick="showGame('way-to-home')">🏡 Way to Home</button>
+    <button class="game-btn" onclick="showGame('paint-sponges')">🧽 Paint Sponges</button>
+    <button class="game-btn" onclick="showGame('pixel-mini-golf')">⛳ Pixel Mini Golf</button>
+    <button class="game-btn" onclick="showGame('neon-bricks')">🧱 Neon Bricks</button>
+    <button class="game-btn" onclick="showGame('go-up-dash')">⬆️ Go Up Dash</button>
+    <button class="game-btn" onclick="showGame('penguin-hero')">🐧 Penguin Rescue Hero</button>
+  </section>  <section class="game-container" id="summer-maze">
+    <h2>🌞 Summer Maze</h2>
+    <p>[Insert working maze game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="key-quest">
+    <h2>🗝️ Key Quest</h2>
+    <p>[Insert working key quest game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="painting-tiles">
+    <h2>🎨 Painting Tiles</h2>
+    <p>[Insert working painting tiles game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="space-slide">
+    <h2>🚀 Space Slide</h2>
+    <p>[Insert working space slide game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="master-sudoku">
+    <h2>🧠 Master Sudoku</h2>
+    <p>[Insert working sudoku game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="way-to-home">
+    <h2>🏡 Way to Home</h2>
+    <p>[Insert working way to home game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="paint-sponges">
+    <h2>🧽 Paint Sponges</h2>
+    <p>[Insert working paint sponges game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="pixel-mini-golf">
+    <h2>⛳ Pixel Mini Golf</h2>
+    <p>[Insert working mini golf game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="neon-bricks">
+    <h2>🧱 Neon Bricks</h2>
+    <p>[Insert working neon bricks game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="go-up-dash">
+    <h2>⬆️ Go Up Dash</h2>
+    <p>[Insert working go up dash game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>
+  <section class="game-container" id="penguin-hero">
+    <h2>🐧 Penguin Rescue Hero</h2>
+    <p>[Insert working penguin rescue game code here]</p>
+    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
+  </section>  <footer>
+    ✨ You've explored the realms of color and joy!<br>
     🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖
-  </div>
-
-  <a class="back-link" href="index.html">👻 Back to the Spooky Realm</a>
-</body>
-</html>
+  </footer>  <script>
+    function showGame(id) {
+      document.querySelector('#home').classList.remove('active');
+      document.querySelectorAll('.game-container').forEach(sec => sec.classList.remove('active'));
+      document.querySelector(`#${id}`).classList.add('active');
+    }
+    function goHome() {
+      document.querySelectorAll('.game-container').forEach(sec => sec.classList.remove('active'));
+      document.querySelector('#home').classList.add('active');
+    }
+  </script></body>
+  </html>
