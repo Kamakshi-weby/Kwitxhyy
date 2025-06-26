@@ -422,12 +422,66 @@ body {
   padding: 0;
   overflow-x: hidden; /* This ensures no horizontal scroll from hidden elements */
 }
+/* Toggle Button (Top Right) */
+#menuToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #111;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+  border: 1px solid #444;
+  border-radius: 5px;
+}
+
+/* Right Slide Menu */
+#spookyMenu {
+  position: fixed;
+  top: 0;
+  right: -250px; /* hidden by default */
+  width: 200px;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  padding-top: 60px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+/* Show when active */
+#spookyMenu.active {
+  right: 0;
+}
+
+/* Menu items */
+#spookyMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#spookyMenu ul li {
+  padding: 15px;
+}
+
+#spookyMenu ul li a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+#spookyMenu ul li a:hover {
+  color: #fff;
+}
 </style>
 </head>
-<body>  <!-- Spooky Menu Toggle Button -->
+<body> <!-- Menu Toggle Button -->
 <div id="menuToggle">☠️ Menu</div>
 
-<!-- Spooky Slide Menu -->
+<!-- Spooky Slide Menu (Right Side) -->
 <nav id="spookyMenu">
   <ul>
     <li><a href="#home">🏠 Home</a></li>
