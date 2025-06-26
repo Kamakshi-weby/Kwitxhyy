@@ -213,6 +213,87 @@
 body {
   margin-left: 180px; /* leaves room for vertical nav */
 }
+.echos-section {
+  background-color: #0d0017;
+  padding: 40px 20px;
+  color: lavender;
+  border-top: 2px solid violet;
+  border-bottom: 2px solid violet;
+}
+.echos-section {
+  background-color: #0d0017;
+  padding: 40px 20px;
+  color: lavender;
+  border-top: 2px solid violet;
+  border-bottom: 2px solid violet;
+}
+
+.echo-entry {
+  margin-bottom: 30px;
+  background-color: #1c002a;
+  padding: 15px;
+  border-left: 4px solid magenta;
+  box-shadow: 0 0 10px rgba(255, 0, 255, 0.2);
+}
+
+.echo-entry h3 {
+  font-family: 'Creepster', cursive;
+  color: violet;
+  margin-bottom: 10px;
+  text-shadow: 0 0 3px magenta;
+}
+.echo-form {
+  margin-top: 40px;
+  background-color: #14001a;
+  padding: 20px;
+  border: 2px dashed violet;
+  color: white;
+  box-shadow: 0 0 10px rgba(200, 0, 255, 0.3);
+}
+
+.echo-form textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #1d002a;
+  border: 1px solid violet;
+  color: lavender;
+  padding: 10px;
+  font-family: 'Georgia', serif;
+  margin-bottom: 10px;
+}
+
+.echo-form button {
+  background-color: violet;
+  color: black;
+  font-weight: bold;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.echo-form button:hover {
+  background-color: magenta;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.user-echos {
+  margin-top: 30px;
+  background-color: #100014;
+  padding: 15px;
+  border-top: 1px solid magenta;
+}
+
+.user-echos .entry {
+  background-color: #1c002a;
+  margin-top: 10px;
+  padding: 10px;
+  color: lavender;
+  border-left: 4px solid violet;
+  font-style: italic;
+}
+
 </style>
 </head>
 <body>
@@ -223,6 +304,7 @@ body {
     <li><a href="#myself">🧙‍♀️ Myself</a></li>
     <li><a href="#blogs">📜 Blogs</a></li>
     <li><a href="#games">🧩 Games</a></li>
+    <li><a href="#echos">🫧 Echos</a></li>
     <li><a href="#playlist">🎶 Playlist</a></li>
     <li><a href="#adios">🔮 Adios</a></li>
   </ul>
@@ -345,7 +427,28 @@ Maybe I was never meant
 to be anything
 but
 Temporary.</p>
-  </section> <section id="mirror" class="spooky-mirror">
+<section id="echos" class="echos-section">
+  <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
+  <article class="echo-entry">
+    <h3>“She Spoke at Midnight”</h3>
+    <p>The spirit whispered through the mirror, revealing a secret forgotten by time...</p>
+  </article>
+
+  <article class="echo-entry">
+    <h3>“Voices in the Fog”</h3>
+    <p>I followed the sound… and found more than a voice waiting beyond the veil.</p>
+  </article>
+<div id="echo-submission" class="echo-form">
+  <h3>🫧 Whisper Your Own Echo...</h3>
+  <textarea id="userStory" placeholder="The spirit moved, and I heard it say..."></textarea>
+  <button onclick="submitEcho()">Submit</button>
+</div>
+
+<div id="userEchos" class="user-echos">
+  <h3>🔮 Other Echos</h3>
+</div>
+</section>
+ <section id="mirror" class="spooky-mirror">
   <h2 class="spooky-heading">🪞 Haunted Mirror</h2>
   <p id="mirrorMessage">Peer into the mirror... what do you seek?</p>
   <button onclick="talkToSpirit()">Speak to the Spirit</button>
@@ -619,5 +722,23 @@ Temporary.</p>
     const options = horoscopes[sign];
     const message = options[Math.floor(Math.random() * options.length)];
     result.innerText = message;
+  }
+</script>
+<script>
+  function submitEcho() {
+    const story = document.getElementById("userStory").value.trim();
+    const userEchos = document.getElementById("userEchos");
+
+    if (story === "") {
+      alert("The spirits demand a message...");
+      return;
+    }
+
+    const entry = document.createElement("div");
+    entry.className = "entry";
+    entry.innerText = story;
+    userEchos.appendChild(entry);
+
+    document.getElementById("userStory").value = "";
   }
 </script>
