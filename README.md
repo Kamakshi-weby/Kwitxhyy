@@ -476,13 +476,44 @@ body {
 #spookyMenu ul li a:hover {
   color: #fff;
 }
+/* Reset default list styles */
+.main-navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #000; /* spooky black */
+  border-bottom: 1px solid #444;
+  overflow-x: auto;
+}
+
+.main-navbar li {
+  margin: 0;
+}
+
+.main-navbar a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none;
+  color: #ffcc00;
+  font-weight: bold;
+  transition: background 0.2s, color 0.2s;
+  white-space: nowrap;
+}
+
+.main-navbar a:hover {
+  background-color: #222;
+  color: white;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
 </style>
 </head>
-<body> <!-- Menu Toggle Button -->
-<div id="menuToggle">☠️ Menu</div>
-
-<!-- Spooky Slide Menu (Right Side) -->
-<nav id="spookyMenu">
+<body><nav class="main-navbar">
   <ul>
     <li><a href="#home">🏠 Home</a></li>
     <li><a href="#about">📜 About</a></li>
