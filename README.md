@@ -3,7 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE REALM</title>
-  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
+  
   <style>
     body {
   margin: 0;
@@ -574,48 +574,7 @@ body {
   }
 }
 .cursed-canvas-section {
-  background: url('https://i.ibb.co/9ng4Nyy/creepy-parchment.jpg') no-repeat center center;
-  background-size: cover;
-  padding: 2rem;
-  color: #ff0033;
-  font-family: 'Creepster', cursive;
-  text-align: center;
-}
 
-.cursed-canvas-section h2 {
-  font-size: 2.5rem;
-  color: #ff0033;
-  text-shadow: 0 0 10px #ff0033;
-}
-
-canvas {
-  border: 4px dashed #ff0033;
-  box-shadow: 0 0 25px #8b0000;
-  background-color: rgba(0, 0, 0, 0.6);
-  cursor: crosshair;
-  margin-top: 1rem;
-}
-
-.controls {
-  margin: 1rem auto;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.controls button {
-  background: #0e0e0e;
-  color: #ff0033;
-  border: 1px solid #ff0033;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  box-shadow: 0 0 10px #ff0033;
-}
-
-.controls input[type=range] {
-  accent-color: #ff0033;
-}
 </style>
 </head>
 <body><nav class="main-navbar">
