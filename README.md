@@ -544,21 +544,33 @@ body {
   box-shadow: 0 0 12px #ff4fff;
   margin-bottom: 24px;
 }
-
-.echo-text {
-  flex: 1;
-  color: #ffffff;
-  font-family: 'Cursive', serif;
-  margin-right: 16px;
-}
-
 .echo-img {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border: 3px solid #ff99ff; /* cute pink border */
+  width: 120px;
+  height: auto;
+  max-width: 100%;
+  border: 3px solid #ff99ff; /* Cute pink border */
   border-radius: 12px;
-  box-shadow: 0 0 8px #ff99ff;
+  box-shadow: 0 0 12px #ff99ff;
+  object-fit: cover;
+  display: block;
+}
+.echo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* ✅ Helps on smaller screens */
+  gap: 15px;
+}
+@media screen and (max-width: 600px) {
+  .echo-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .echo-img {
+    margin-top: 10px;
+    width: 100px;
+  }
 }
 </style>
 </head>
