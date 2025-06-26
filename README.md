@@ -5,6 +5,10 @@
   <title>THE REALM</title>
   <style>
     body {
+  margin: 0;
+  overflow-x: hidden;
+}
+    body {
       background: black;
       color: white;
       font-family: 'Courier New', Courier, monospace;
@@ -214,6 +218,19 @@
   color: white;
   text-shadow: 0 0 5px magenta;
   transform: scale(1.1);
+}
+#spiderbar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* changed from -220px to -250px */
+  width: 220px;
+  height: 100%;
+  background-color: #0a0015;
+  padding-top: 60px;
+  box-shadow: 4px 0 10px #800080;
+  transition: left 0.4s ease;
+  z-index: 1000;
+  overflow-x: hidden;
 }
 
 /* Show menu when active */
