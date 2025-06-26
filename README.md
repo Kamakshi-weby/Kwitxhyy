@@ -627,7 +627,7 @@ I’ve searched within, I’ve tried my best, But some battles don’t end in re
 So if I seem like I’m drifting apart, Know it’s not hate—it’s a heavy heart. I gave my all, yet here I stand, Still wondering if I was ever enough... in anyone’s hands......
 </p>
 <h3>Blog 3: 25/06/2025</h3>
-    <p>"Temporary"-->
+    <p>"TEMPORARY"-->
 I always knew who I was-
 a shadow I never truly liked.
 Maybe God had plans to heal me,
@@ -713,7 +713,7 @@ to be anything
 but
 Temporary.</p>
 <h3>Blog 4: 26/06/2025</h3>
-    <p><bold>APOLOGIES</bold>----->I love you more than words can say,
+    <p><bold>"APOLOGIES"</bold>----->I love you more than words can say,
 And even now, I feel that way.
 No matter what I've done or shown,
 This love in me has only grown.
