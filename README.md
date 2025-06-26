@@ -623,7 +623,7 @@ So if I seem like I’m drifting apart, Know it’s not hate—it’s a heavy he
 </p>
 <h3>Blog 3: 25/06/2025</h3>
     <p>"Temporary"-->
-I always knew who I was
+I always knew who I was-
 a shadow I never truly liked.
 Maybe God had plans to heal me,
 or maybe… to break me twice.
@@ -717,9 +717,9 @@ Temporary.</p>
 
 She’s in her 50s now, a brilliant and respected Advocate by profession. But to me, she’s more than just a lawyer — she’s my inspiration, my definition of strength, and the woman I aspire to be like every single day.
 
-I’ve never really dreamed of becoming a lawyer like her — but it’s the way she carries herself, her grace under pressure, and her ability to balance power with gentleness that leaves me in awe.
+Not because she is my mother-but it’s the way she carries herself, her grace under pressure, and her ability to balance power with gentleness that leaves me in awe.
 
-She wakes up early, gets everything at home running, and then drives off to her workplace like a warrior in heels. She handles intense cases in court, makes difficult decisions with clarity, and still — after a long, exhausting day — she returns home and cooks the most comforting, delicious food you could ever imagine.
+She wakes up early, gets everything at home running, and then drives off to her workplace to manage things there. She handles everything so smooth and makes difficult things so easy and still — after a long, exhausting day — she returns home and cooks the most comforting, delicious food you could ever imagine.
 
 But more than all of that… it’s her love. Her endless, unconditional love.
 The kind that heals me.
