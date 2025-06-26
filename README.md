@@ -591,11 +591,11 @@ body {
   </section>  <section id="about" class="about">
     <h2>About Me</h2>
     <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
-    <p>I'm <st<!-- 🕷️ Toggle Button -->
+    <!-- 🕷️ Toggle Button -->
   
 
 <p>I'm<strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
-  </section> <div class="main-content"> <section id="myself" class="myself">
+   <div class="main-content"> <section id="myself" class="myself">
     <h2>This Witchy</h2>
     <img src="5A6ABF91B5E13A4E907FE5B2CDCA7C31F748AD45" alt="Myself image" class="small-img" />
     <p>Hi there! I'm Kamakshi and this is my first time creating a website where I blog and maybe live. About myself I'm 18 and I'm very much interested in gaming and doing nothing but also a little bit of coding. I love making friends, and in person I maybe an extrovert but I'm not much confident if you ask me but that's ok. That's how life works right!?. I might not be perfect and neither is this website but I hope y'all like it 😄. Thanks for being here. Toodles!</p>
