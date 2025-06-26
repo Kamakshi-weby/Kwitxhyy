@@ -511,6 +511,29 @@ body {
   padding: 0;
   overflow-x: hidden;
 }
+.echo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #240031; /* your purple-dark theme */
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px #ff00ff;
+  margin-bottom: 20px;
+}
+
+.echo-text {
+  flex: 1;
+  color: white;
+  font-family: 'Cursive', serif;
+}
+
+.echo-img {
+  width: 60px;
+  height: auto;
+  margin-left: 10px;
+  border-radius: 8px;
+}
 </style>
 </head>
 <body><nav class="main-navbar">
@@ -649,9 +672,13 @@ Temporary.</p>
 <section id="echos" class="echos-section">
   <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
   <article class="echo-entry">
+    <div class="echo-card">
+  <div class="echo-text">
     <h3>“She Spoke at Midnight”</h3>
-    <p>The spirit whispered through the mirror, revealing a secret forgotten by time...</p>
-  </article>
+    <p>The spirit whispered through the mirror,<br> revealing a secret forgotten by time…</p>
+  </div>
+  <img src="your-image-path.jpg" alt="ghost icon" class="echo-img">
+</div>
 
   <article class="echo-entry">
     <h3>“Voices in the Fog”</h3>
