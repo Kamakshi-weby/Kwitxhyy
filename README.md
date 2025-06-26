@@ -232,7 +232,24 @@
   z-index: 1000;
   overflow-x: hidden;
 }
-
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Hides the black scroll space */
+  background-color: #000010; /* or your page background */
+}
+#spiderbar {
+  position: fixed;
+  top: 0;
+  left: -250px; /* fully off-screen */
+  width: 220px;
+  height: 100%;
+  background-color: #0a0015;
+  padding-top: 60px;
+  box-shadow: 4px 0 10px #800080;
+  transition: left 0.5s ease;
+  z-index: 1000;
+}
 /* Show menu when active */
 #spiderbar.active {
   left: 0;
@@ -355,7 +372,10 @@ body {
     <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
     <p>I'm <st<!-- 🕷️ Toggle Button -->
 
-<!-- 🕸️ Spider Slide-In Menu -->
+<!-- 🕷️ Spider Toggle Button -->
+<div id="spiderToggle">🕷️</div>
+
+<!-- 🕸️ Spider Sidebar Menu -->
 <div id="spiderbar">
   <a href="#home">🏠 Home</a>
   <a href="#about">🕯️ About</a>
@@ -365,7 +385,7 @@ body {
   <a href="#echos">🔮 Echos</a>
   <a href="#playlist">🎵 Playlist</a>
   <a href="#adios">🌙 Adios</a>
-    </div><strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
+</div><strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
   </section> <div class="main-content"> <section id="myself" class="myself">
     <h2>This Witchy</h2>
     <img src="5A6ABF91B5E13A4E907FE5B2CDCA7C31F748AD45" alt="Myself image" class="small-img" />
