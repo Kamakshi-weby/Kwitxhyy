@@ -1,374 +1,105 @@
-
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chromaverse Mini‑Games</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-  :root {
-    --bg: #faf8ff;
-    --panel: #e0e7ff;
-    --accent: #ff9ee8;
-    --text: #333;
-    --btn: #fff;
-    --btn-hover: #f0f4ff;
-  }
-  * { box-sizing: border-box; }
-  body {
-    margin: 0;
-    font-family: 'Press Start 2P', sans-serif;
-    background: var(--bg);
-    color: var(--text);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-bottom: 2rem;
-  }
-  header {
-    text-align: center;
-    padding: 2rem 1rem 0;
-  }
-  h1 { color: var(--accent); margin: 0; }
-  #menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 1rem;
-    width: 90%;
-    max-width: 800px;
-    margin-top: 1rem;
-  }
-  .game-btn {
-    background: var(--btn);
-    border: 2px solid var(--text);
-    border-radius: 6px;
-    padding: 1rem;
-    font-size: 0.75rem;
-    cursor: pointer;
-    transition: transform 0.1s, background 0.2s;
-    text-align: center;
-  }
-  .game-btn:hover {
-    transform: scale(1.05);
-    background: var(--btn-hover);
-  }
-  #game-area {
-    width: 90%;
-    max-width: 800px;
-    height: 400px;
-    background: var(--panel);
-    border-radius: 8px;
-    margin: 2rem 0;
-    position: relative;
-    overflow: hidden;
-  }
-  #back, #spooky {
-    position: absolute;
-    padding: 0.5rem 1rem;
-    background: var(--accent);
-    border: none;
-    color: white;
-    cursor: pointer;
-    font-size: 0.7rem;
-    border-radius: 4px;
-    display: none;
-  }
-  #back { top: 8px; right: 8px; }
-  #spooky { bottom: 8px; left: 50%; transform: translateX(-50%); }
-  canvas {
-    width: 100%;
-    height: 100%;
-    display: none;
-    background: white;
-  }
-  #adios {
-    text-align: center;
-    display: none;
-    margin-top: 2rem;
-  }
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Chromaverse</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background: linear-gradient(135deg, #f0f, #0ff, #ff0);
+      color: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }h1 {
+  margin-top: 2rem;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 5px #000;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  margin: 3rem 1rem;
+  width: 100%;
+  max-width: 700px;
+}
+
+.game-list a {
+  display: block;
+  width: 100%;
+  background: linear-gradient(to right, #ff66cc, #66ccff);
+  padding: 1rem;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game-list a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.adios-section {
+  margin-top: auto;
+  width: 100%;
+  background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
+  color: white;
+  text-align: center;
+  padding: 3rem 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px white;
+}
+
+.back-link:hover {
+  background: white;
+  color: black;
+  box-shadow: 0 0 20px #fff;
+}
+
+  </style>
 </head>
 <body>
-
-<header>
-  <h1>🔮 Chromaverse Mini‑Games</h1>
-  <p>Click a game to play instantly. Return when you're ready!</p>
-</header>
-
-<div id="menu"></div>
-
-<div id="game-area">
-  <button id="back">← Back</button>
-  <button id="spooky">Return to Spooky Realm</button>
-  <!-- Game canvases loaded here -->
-</div>
-
-<div id="adios">
-  <h2>👻 You’ve left the Chromaverse</h2>
-  <p>Come back anytime — many worlds await!</p>
-</div>
-
-<script>
-  const games = [
-    {id:'maze', name:'Summer Maze', fn: mazeGame},
-    {id:'key', name:'Key Quest', fn: keyQuest},
-    {id:'tiles', name:'Painting Tiles', fn: paintingTiles},
-    {id:'space', name:'Space Slide', fn: spaceSlide},
-    {id:'sudoku', name:'Master Sudoku', fn: sudoku},
-    {id:'home', name:'Way to Home', fn: wayHome},
-    {id:'sponges', name:'Paint Sponges', fn: paintSponges},
-    {id:'golf', name:'Pixel Mini Golf', fn: miniGolf},
-    {id:'bricks', name:'Neon Bricks', fn: neonBricks},
-    {id:'go', name:'↑ Go Up Dash', fn: goUpDash},
-    {id:'penguin', name:'Penguin Rescue Hero', fn: penguinRescue}
-  ];
-
-  const menu = document.getElementById('menu');
-  const area = document.getElementById('game-area');
-  const back = document.getElementById('back');
-  const spooky = document.getElementById('spooky');
-  const adios = document.getElementById('adios');
-  const canvasStore = {};
-
-  games.forEach(g => {
-    const btn = document.createElement('button');
-    btn.className = 'game-btn';
-    btn.textContent = g.name;
-    btn.onclick = () => startGame(g);
-    menu.appendChild(btn);
-
-    // Prepare canvas
-    const cvs = document.createElement('canvas');
-    cvs.id = g.id;
-    area.appendChild(cvs);
-    canvasStore[g.id] = cvs;
-  });
-
-  function startGame({id, fn}) {
-    menu.style.display = 'none';
-    adios.style.display = 'none';
-    back.style.display = 'block';
-    spooky.style.display = 'block';
-    Object.values(canvasStore).forEach(c => c.style.display = 'none');
-    const cvs = canvasStore[id];
-    cvs.style.display = 'block';
-    fn(cvs);
-  }
-
-  back.onclick = () => {
-    back.style.display = 'none';
-    spooky.style.display = 'none';
-    Object.values(canvasStore).forEach(c => c.style.display = 'none');
-    menu.style.display = 'grid';
-  };
-
-  spooky.onclick = () => {
-    back.style.display = 'none';
-    spooky.style.display = 'none';
-    Object.values(canvasStore).forEach(c => c.style.display = 'none');
-    adios.style.display = 'block';
-  };
-
-  /* --- Simple Game Implementations --- */
-
-  function mazeGame(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientHeight;
-    ctx.fillStyle = 'lightblue';
-    ctx.fillRect(0,0,c.width,c.height);
-    ctx.strokeStyle = 'white';
-    ctx.lineWidth = 5;
-    ctx.beginPath();
-    ctx.moveTo(20,20);
-    ctx.lineTo(c.width - 20, c.height - 20);
-    ctx.stroke();
-    ctx.fillStyle = 'white';
-    ctx.font = '20px sans-serif';
-    ctx.fillText('Maze Demo →',20,40);
-  }
-
-  function keyQuest(c) {
-    const ctx = c.getContext('2d');
-    c.width = 400; c.height = 300;
-    ctx.fillStyle = '#ffe5a5';
-    ctx.fillRect(0, 0, c.width, c.height);
-    ctx.fillStyle = 'black';
-    ctx.font = '24px sans-serif';
-    ctx.fillText('Click key 🔑 then click *door*', 10, 150);
-    let has = false;
-    c.addEventListener('click', e => {
-      const x = e.offsetX, y = e.offsetY;
-      if (!has && x < 50 && y < 50) {
-        has = true; redraw();
-      } else if (has && x > c.width-60 && y < 50) {
-        alert('You escaped!');
-        startOver();
-      }
-    });
-    redraw();
-    function redraw() {
-      ctx.clearRect(0,0,c.width,c.height);
-      ctx.fillStyle = '#ffe5a5';
-      ctx.fillRect(0, 0, c.width, c.height);
-      ctx.fillStyle = 'gold';
-      if (!has) ctx.fillRect(10,10,40,40); // key
-      ctx.fillStyle = 'brown';
-      ctx.fillRect(c.width-50,10,40,40); // door
-    }
-    function startOver() { has = false; redraw(); }
-  }
-
-  function paintingTiles(c) {
-    const ctx = c.getContext('2d');
-    const grid = 4;
-    const size = c.clientWidth / grid;
-    c.width = c.clientWidth; c.height = c.clientWidth;
-    const state = Array(grid).fill().map(() => Array(grid).fill(0));
-    draw();
-    c.addEventListener('click', e => {
-      const X = Math.floor(e.offsetX / size);
-      const Y = Math.floor(e.offsetY / size);
-      state[Y][X] = 1 - state[Y][X];
-      draw();
-    });
-    function draw() {
-      for (let y = 0; y < grid; y++)
-        for (let x = 0; x < grid; x++) {
-          ctx.fillStyle = state[y][x] ? '#ff9999' : '#ddddff';
-          ctx.fillRect(x * size, y * size, size - 2, size - 2);
-        }
-    }
-  }
-
-  function spaceSlide(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientHeight;
-    let pos = c.height / 2;
-    ctx.fillStyle = 'black'; ctx.fillRect(0,0,c.width,c.height);
-    const loop = () => {
-      ctx.fillStyle = 'black'; ctx.fillRect(0,0,c.width,c.height);
-      ctx.fillStyle = 'white';
-      for (let i=0; i<100; i++) ctx.fillRect(Math.random()*c.width, Math.random()*c.height,2,2);
-      ctx.fillStyle = 'red';
-      ctx.fillRect(c.width/2-15, pos,30,30);
-      c.request = requestAnimationFrame(loop);
-    };
-    loop();
-    c.addEventListener('click', () => {
-      cancelAnimationFrame(c.request);
-      alert('Space Slide stopped!');
-    }, {once:true});
-  }
-
-  function sudoku(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientWidth;
-    ctx.lineWidth = 2;
-    for (let i = 0; i <= 9; i++) {
-      ctx.beginPath();
-      ctx.moveTo(i*c.width/9,0);
-      ctx.lineTo(i*c.width/9,c.height);
-      ctx.moveTo(0, i*c.width/9);
-      ctx.lineTo(c.width,i*c.width/9);
-      ctx.stroke();
-    }
-  }
-
-  function wayHome(c) {
-    const ctx = c.getContext('2d');
-    const W = c.width = c.clientWidth, H = c.height = c.clientHeight;
-    let x = W/2, y = H-30;
-    ctx.fillStyle = '#aaffaa'; ctx.fillRect(0,0,W,H);
-    ctx.fillStyle = '#774400'; ctx.fillRect(W/2-15, 10, 30, 20);
-    area.addEventListener('keydown', keyHandler);
-    area.tabIndex = 0; area.focus();
-    function keyHandler(e) {
-      if (e.key === 'ArrowLeft') x-=10;
-      if (e.key === 'ArrowRight') x+=10;
-      draw();
-    }
-    draw();
-    function draw(){
-      ctx.clearRect(0,0,W,H);
-      ctx.fillStyle = '#aaffaa'; ctx.fillRect(0,0,W,H);
-      ctx.fillStyle = '#774400'; ctx.fillRect(W/2-15, 10, 30, 20);
-      ctx.fillStyle = 'black'; ctx.fillRect(x,y,20,20);
-    }
-  }
-
-  function paintSponges(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientHeight;
-    const color = '#' + Math.floor(Math.random()*0xFFFFFF).toString(16).padStart(6,'0');
-    ctx.fillStyle = color; ctx.fillRect(0,0,c.width,c.height);
-  }
-
-  function miniGolf(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientWidth/2;
-    let ball = {x:50,y:c.height-20}, hole = {x:c.width-30,y:20};
-    ctx.fillStyle = 'lightgreen'; ctx.fillRect(0,0,c.width,c.height);
-    ctx.fillStyle = 'white'; ctx.beginPath();
-    ctx.arc(ball.x,ball.y,10,0,2*Math.PI); ctx.fill();
-    ctx.fillStyle = 'black'; ctx.fillRect(hole.x,hole.y,20,20);
-    c.addEventListener('click', () => {
-      ball.x = hole.x; ball.y = hole.y;
-      draw();
-      alert('Goal! 🏌️');
-    }, {once:true});
-    function draw(){
-      ctx.fillStyle = 'lightgreen'; ctx.fillRect(0,0,c.width,c.height);
-      ctx.fillStyle = 'white'; ctx.beginPath();
-      ctx.arc(ball.x,ball.y,10,0,2*Math.PI); ctx.fill();
-      ctx.fillStyle = 'black'; ctx.fillRect(hole.x,hole.y,20,20);
-    }
-  }
-
-  function neonBricks(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientWidth/1.3;
-    const cols = 7, rows = 4;
-    const w = c.width/cols, h = 20;
-    for (let r=0; r<rows; r++){
-      for (let i=0;i<cols;i++){
-        ctx.fillStyle = `hsl(${r*60},70%,60%)`;
-        ctx.fillRect(i*w + 5, r*h + 5, w-10, h-5);
-      }
-    }
-  }
-
-  function goUpDash(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientWidth * 1.3;
-    let y = c.height - 30;
-    ctx.fillStyle = 'lightblue'; ctx.fillRect(0,0,c.width,c.height);
-    ctx.fillStyle = 'black'; ctx.fillRect(c.width/2-10, y,20,20);
-    const step = () => {
-      y -= 10; 
-      if (y < 0) { alert('Reached top!'); return; }
-      draw(); setTimeout(step,100);
-    };
-    draw();
-    step();
-    function draw(){
-      ctx.clearRect(0,0,c.width,c.height);
-      ctx.fillStyle = 'lightblue'; ctx.fillRect(0,0,c.width,c.height);
-      ctx.fillStyle = 'black'; ctx.fillRect(c.width/2-10, y,20,20);
-    }
-  }
-
-  function penguinRescue(c) {
-    const ctx = c.getContext('2d');
-    c.width = c.clientWidth; c.height = c.clientWidth;
-    ctx.fillStyle = '#cceeff'; ctx.fillRect(0,0,c.width,c.height);
-    ctx.fillStyle = 'black'; ctx.beginPath();
-    ctx.arc(c.width/2, c.height/2, 30,0,2*Math.PI); ctx.fill();
-    ctx.fillStyle = 'orange'; ctx.beginPath();
-    ctx.moveTo(c.width/2, c.height/2);
-    ctx.lineTo(c.width/2+15, c.height/2+20);
-    ctx.lineTo(c.width/2-15, c.height/2+20);
-    ctx.fill();
-  }
-</script>
+  <h1>🌈 Welcome to The Chromaverse</h1>  <div class="game-list">
+    <a href="https://www.jopi.com/gam/summer-maze/" target="_blank">🎮 Summer Maze</a>
+    <a href="https://www.jopi.com/gam/key-quest/" target="_blank">🗝️ Key Quest</a>
+    <a href="https://www.jopi.com/gam/painting-tiles/" target="_blank">🎨 Painting Tiles</a>
+    <a href="https://www.jopi.com/gam/space-slide/" target="_blank">🚀 Space Slide</a>
+    <a href="https://www.jopi.com/gam/master-sudoku/" target="_blank">🧠 Master Sudoku</a>
+    <a href="https://www.jopi.com/gam/way-to-home/" target="_blank">🏡 Way to Home</a>
+    <a href="https://www.jopi.com/gam/paint-sponges-puzzle/" target="_blank">🧽 Paint Sponges</a>
+    <a href="https://www.jopi.com/gam/pixel-mini-golf/" target="_blank">⛳ Pixel Mini Golf</a>
+    <a href="https://www.jopi.com/gam/neon-bricks/" target="_blank">🧱 Neon Bricks</a>
+    <a href="https://www.jopi.com/gam/go-up-dash/" target="_blank">⬆️ Go Up Dash</a>
+    <a href="https://spritted.com/embed/penguin-rescue-hero" target="_blank">🐧 Penguin Rescue Hero</a>
+  </div>  <div class="adios-section">
+    ✨ You've explored the realms of color and joy! <br>
+    🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖
+  </div><a class="back-link" href="index.html">👻 Back to the Spooky Realm</a>
 
 </body>
-  </html>
+</html>
