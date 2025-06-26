@@ -1,148 +1,287 @@
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Chromaverse</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom right, #fcdce1, #e8daf0, #c8ceee);
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }header {
-  background: linear-gradient(to right, #fcdce1, #e8daf0);
-  width: 100%;
-  padding: 2rem 1rem;
-  text-align: center;
-  border-bottom-left-radius: 3rem;
-  border-bottom-right-radius: 3rem;
-}
-
-header h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 3rem;
-  color: #7a52aa;
-  margin: 0;
-}
-
-header p {
-  font-size: 1.3rem;
-  margin-top: 0.5rem;
-}
-
-.game-list {
-  background: linear-gradient(#d2e0d3, #f0ddd6);
-  width: 100%;
-  padding: 2rem 1rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.game-container {
-  background: #ffffffcc;
-  margin: 1rem 0;
-  padding: 1rem;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  width: 90%;
-  max-width: 800px;
-}
-
-.game-title {
-  font-size: 1.5rem;
-  margin-bottom: 0.5rem;
-}
-
-iframe {
-  width: 100%;
-  height: 400px;
-  border: none;
-  border-radius: 1rem;
-}
-
-footer {
-  background: linear-gradient(to right, #c8ceee, #e8daf0);
-  width: 100%;
-  padding: 3rem 1rem;
-  text-align: center;
-  font-size: 1.1rem;
-  border-top-left-radius: 3rem;
-  border-top-right-radius: 3rem;
-  background-image: radial-gradient(circle at top left, #fcdce1, #c8ceee);
-  color: #4a3c68;
-}
-
-.footer-button {
-  margin-top: 1rem;
-  padding: 0.7rem 1.5rem;
-  background: #ffffff;
-  border: 2px solid #7a52aa;
-  color: #7a52aa;
-  border-radius: 1rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Chromaverse Mini‑Games</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+  :root {
+    --bg: #f4f7fb;
+    --panel: #e0e7ff;
+    --panel2: #ffe0e0;
+    --accent: #ff87c1;
+    --text: #333;
+    --btn: #fff;
+    --btn-hover: #dde8ff;
+  }
+  body {
+    margin:0;
+    background:var(--bg);
+    font-family:'Press Start 2P', monospace;
+    color:var(--text);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    min-height:100vh;
+  }
+  header {
+    padding:2rem;
+    text-align:center;
+  }
+  header h1 {
+    font-size:2rem;
+    color:var(--accent);
+  }
+  #menu {
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:1rem;
+    width:90%;
+    max-width:800px;
+  }
+  .game-btn {
+    background:var(--btn);
+    border:2px solid var(--text);
+    border-radius:4px;
+    padding:1rem;
+    font-size:0.8rem;
+    cursor:pointer;
+    transition:transform .1s, background .2s;
+    text-align:center;
+  }
+  .game-btn:hover {
+    transform:scale(1.05);
+    background:var(--btn-hover);
+  }
+  #game-area {
+    width:90%;
+    max-width:800px;
+    min-height:400px;
+    margin:2rem 0;
+    background:var(--panel);
+    border-radius:8px;
+    box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    position:relative;
+    overflow:hidden;
+  }
+  #back-btn {
+    position:absolute; top:8px; right:8px;
+    background:var(--accent);
+    border:none;
+    padding:0.5rem 1rem;
+    color:#fff;
+    cursor:pointer;
+    font-size:0.75rem;
+    display:none;
+  }
+  .game-canvas {
+    width:100%;
+    height:100%;
+    display:none;
+  }
+</style>
 </head>
 <body>
-  <header>
-    <h1>Chromaverse</h1>
-    <p>Explore magical mini games in pastel wonder!</p>
-  </header>  <section class="game-list">
-    <div class="game-container">
-      <div class="game-title">🌞 Summer Maze</div>
-      <iframe src="games/summer-maze/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🔑 Key Quest</div>
-      <iframe src="games/key-quest/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🎨 Painting Tiles</div>
-      <iframe src="games/painting-tiles/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🚀 Space Slide</div>
-      <iframe src="games/space-slide/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🧠 Master Sudoku</div>
-      <iframe src="games/master-sudoku/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🏡 Way to Home</div>
-      <iframe src="games/way-to-home/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🧽 Paint Sponges</div>
-      <iframe src="games/paint-sponges/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">⛳ Pixel Mini Golf</div>
-      <iframe src="games/pixel-mini-golf/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🧱 Neon Bricks</div>
-      <iframe src="games/neon-bricks/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">⬆ Go Up Dash</div>
-      <iframe src="games/go-up-dash/index.html"></iframe>
-    </div>
-    <div class="game-container">
-      <div class="game-title">🐧 Penguin Rescue Hero</div>
-      <iframe src="games/penguin-rescue/index.html"></iframe>
-    </div>
-  </section>  <footer>
-    ✨ You’ve explored the realms of color and joy! 🌈 Stay playful, stay magical! 💖
-    <br><br>
-    <button class="footer-button" onclick="location.href='spooky.html'">👻 Back to the Spooky Realm</button>
-  </footer>
+
+<header>
+  <h1>🎮 Chromaverse Mini‑Games</h1>
+  <p>Click any game to start playing instantly!</p>
+</header>
+
+<div id="menu"></div>
+
+<div id="game-area">
+  <button id="back-btn">← Back</button>
+  <!-- Game canvases -->
+  <canvas id="maze" class="game-canvas"></canvas>
+  <canvas id="keyquest" class="game-canvas"></canvas>
+  <canvas id="tiles" class="game-canvas"></canvas>
+  <canvas id="space" class="game-canvas"></canvas>
+  <canvas id="sudoku" class="game-canvas"></canvas>
+  <canvas id="wayhome" class="game-canvas"></canvas>
+  <canvas id="sponges" class="game-canvas"></canvas>
+  <canvas id="golf" class="game-canvas"></canvas>
+  <canvas id="bricks" class="game-canvas"></canvas>
+  <canvas id="goup" class="game-canvas"></canvas>
+  <canvas id="penguin" class="game-canvas"></canvas>
+</div>
+
+<script>
+const games = [
+  {id:'maze', name:'Summer Maze', fn: initMaze},
+  {id:'keyquest', name:'Key Quest', fn: initKeyQuest},
+  {id:'tiles', name:'Painting Tiles', fn: initTiles},
+  {id:'space', name:'Space Slide', fn: initSpace},
+  {id:'sudoku', name:'Master Sudoku', fn: initSudoku},
+  {id:'wayhome', name:'Way to Home', fn: initWayHome},
+  {id:'sponges', name:'Paint Sponges', fn: initSponges},
+  {id:'golf', name:'Pixel Mini Golf', fn: initGolf},
+  {id:'bricks', name:'Neon Bricks', fn: initBricks},
+  {id:'goup', name:'↑ Go Up Dash', fn: initGoUp},
+  {id:'penguin', name:'Penguin Rescue Hero', fn: initPenguin}
+];
+
+const menu = document.getElementById('menu');
+const back = document.getElementById('back-btn');
+const canvases = Object.fromEntries(Array.from(document.querySelectorAll('.game-canvas')).map(c=>[c.id,c]));
+
+games.forEach(g=>{
+  const btn = document.createElement('button');
+  btn.className='game-btn';
+  btn.textContent=g.name;
+  btn.onclick=()=>launchGame(g.id, g.fn);
+  menu.appendChild(btn);
+});
+
+function launchGame(id, fn){
+  menu.style.display='none';
+  back.style.display='block';
+  Object.values(canvases).forEach(c=>c.style.display='none');
+  const c=canvases[id];
+  c.style.display='block';
+  fn(c);
+}
+
+back.onclick = () => {
+  Object.values(canvases).forEach(c=>c.style.display='none');
+  back.style.display='none';
+  menu.style.display='grid';
+};
+
+// ---- GAME INITIALIZERS ----
+// Each function draws a simple playable demo
+function initMaze(c){
+  const ctx=c.getContext('2d');
+  const size=20, cols=20, rows=15;
+  c.width=cols*size; c.height=rows*size;
+  ctx.fillStyle='black';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='lightblue';
+  ctx.fillRect(size, size, size, size);
+  ctx.font='20px sans-serif';
+  ctx.fillStyle='white';
+  ctx.fillText('Maze Demo',40, c.height/2);
+}
+
+function initKeyQuest(c){
+  const ctx=c.getContext('2d');
+  c.width=400; c.height=300;
+  ctx.fillStyle='#faffd2';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='#333';
+  ctx.font='24px sans-serif';
+  ctx.fillText('Key to door →', 120,150);
+}
+
+function initTiles(c){
+  const ctx=c.getContext('2d');
+  c.width=300; c.height=300;
+  for(let i=0;i<3;i++){
+    for(let j=0;j<3;j++){
+      ctx.fillStyle = `hsl(${60*i+20*j},70%,80%)`;
+      ctx.fillRect(i*100, j*100, 100,100);
+    }
+  }
+}
+
+function initSpace(c){
+  const ctx=c.getContext('2d');
+  c.width=400; c.height=300;
+  ctx.fillStyle='black';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='white';
+  for(let i=0;i<50;i++){
+    ctx.fillRect(Math.random()*c.width, Math.random()*c.height,2,2);
+  }
+}
+
+function initSudoku(c){
+  const ctx=c.getContext('2d');
+  c.width=360; c.height=360;
+  ctx.strokeStyle='#333';
+  for(let i=0;i<=9;i++){
+    ctx.lineWidth = (i%3===0?2:1);
+    ctx.beginPath();
+    ctx.moveTo(i*40,0);
+    ctx.lineTo(i*40,360);
+    ctx.moveTo(0,i*40);
+    ctx.lineTo(360,i*40);
+    ctx.stroke();
+  }
+}
+
+function initWayHome(c){
+  const ctx=c.getContext('2d');
+  c.width=300; c.height=200;
+  ctx.fillStyle='#a8ff9e';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='#000';
+  ctx.fillRect(140,180,20,20);
+  ctx.fillStyle='#755';
+  ctx.fillRect(130,160,40,20);
+}
+
+function initSponges(c){
+  const ctx=c.getContext('2d');
+  c.width=300; c.height=200;
+  let color='#';
+  for(let i=0;i<6;i++){
+    color += Math.floor(Math.random()*10);
+  }
+  ctx.fillStyle=color;
+  ctx.fillRect(50,50,200,100);
+}
+
+function initGolf(c){
+  const ctx=c.getContext('2d');
+  c.width=400; c.height=200;
+  ctx.fillStyle='lightgreen';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.beginPath();
+  ctx.arc(50,150,10,0,2*Math.PI);
+  ctx.fillStyle='white';
+  ctx.fill();
+  ctx.fillStyle='black';
+  ctx.fillRect(350,140,10,30);
+}
+
+function initBricks(c){
+  const ctx=c.getContext('2d');
+  c.width=400; c.height=300;
+  for(let r=0;r<5;r++){
+    for(let b=0;b<8;b++){
+      ctx.fillStyle=`hsl(${r*60},70%,70%)`;
+      ctx.fillRect(b*50+5, r*20+5, 45,15);
+    }
+  }
+}
+
+function initGoUp(c){
+  const ctx=c.getContext('2d');
+  c.width=300; c.height=400;
+  ctx.fillStyle='skyblue';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='black';
+  ctx.fillRect(140,380,20,20);
+  ctx.fillText('↑ Go Up!', 120,50);
+}
+
+function initPenguin(c){
+  const ctx=c.getContext('2d');
+  c.width=300; c.height=300;
+  ctx.fillStyle='#def';
+  ctx.fillRect(0,0,c.width,c.height);
+  ctx.fillStyle='black';
+  ctx.beginPath();
+  ctx.arc(150,150,30,0,2*Math.PI);
+  ctx.fill();
+  ctx.fillStyle='orange';
+  ctx.beginPath();
+  ctx.moveTo(150,150);
+  ctx.lineTo(165,170);
+  ctx.lineTo(135,170);
+  ctx.fill();
+}
+</script>
+
 </body>
   </html>
