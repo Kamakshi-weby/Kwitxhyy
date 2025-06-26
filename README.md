@@ -171,19 +171,61 @@
   50% { opacity: 0.8; }
   100% { opacity: 0; }
 }
+.vertical-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px;
+  background-color: #0b0019;
+  padding-top: 40px;
+  z-index: 1000;
+  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.7);
+}
+
+.vertical-nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-nav ul li {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.vertical-nav ul li a {
+  color: violet;
+  text-decoration: none;
+  font-family: 'Creepster', cursive;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.vertical-nav ul li a:hover {
+  background-color: #1e0033;
+  color: white;
+  text-shadow: 0 0 5px magenta;
+  border-left: 4px solid violet;
+}
+body {
+  margin-left: 180px; /* leaves room for vertical nav */
+}
 </style>
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#myself">Myself</a></li>
-      <li><a href="#blogs">Blogs</a></li>
-      <li><a href="#quiz">Quiz</a></li>
-      <li><a href="#games">Games</a></li>
-      <li><a href="#calendar">Calendar</a></li>
-    </ul>
+  <nav class="vertical-nav">
+  <ul>
+    <li><a href="#home">🏠 Home</a></li>
+    <li><a href="#about">🕯️ About</a></li>
+    <li><a href="#myself">🧙‍♀️ Myself</a></li>
+    <li><a href="#blogs">📜 Blogs</a></li>
+    <li><a href="#games">🧩 Games</a></li>
+    <li><a href="#playlist">🎶 Playlist</a></li>
+    <li><a href="#adios">🔮 Adios</a></li>
+  </ul>
   </nav>  <section id="home">
     <h2>Welcome to the Realm 🌒</h2>
     <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
