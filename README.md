@@ -675,15 +675,31 @@ Temporary.</p>
     <div class="echo-card">
   <div class="echo-text">
     <h3>“She Spoke at Midnight”</h3>
-    <p>The spirit whispered through the mirror,<br> revealing a secret forgotten by time…</p>
+    <p><bold>MY MOM</bold>......She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
+
+She’s in her 50s now, a brilliant and respected Advocate by profession. But to me, she’s more than just a lawyer — she’s my inspiration, my definition of strength, and the woman I aspire to be like every single day.
+
+I’ve never really dreamed of becoming a lawyer like her — but it’s the way she carries herself, her grace under pressure, and her ability to balance power with gentleness that leaves me in awe.
+
+She wakes up early, gets everything at home running, and then drives off to her workplace like a warrior in heels. She handles intense cases in court, makes difficult decisions with clarity, and still — after a long, exhausting day — she returns home and cooks the most comforting, delicious food you could ever imagine.
+
+But more than all of that… it’s her love. Her endless, unconditional love.
+The kind that heals me.
+The kind that protects me.
+The kind that no one else in this world can match.
+
+She’s not just my mom.
+She’s my strength.
+She’s my soft place to fall.
+She’s home.
+
+I love you so much, Mumma — more than words could ever explain.
+And every day, I thank the universe that you’re mine.</p>
   </div>
-  <img src="your-image-path.jpg" alt="ghost icon" class="echo-img">
+  <img src="1750922400502.webp" alt="ghost icon" class="echo-img">
 </div>
 
-  <article class="echo-entry">
-    <h3>“Voices in the Fog”</h3>
-    <p>I followed the sound… and found more than a voice waiting beyond the veil.</p>
-  </article>
+  
 <div id="echo-submission" class="echo-form">
   <h3>🫧 Whisper Your Own Echo...</h3>
   <textarea id="userStory" placeholder="The spirit moved, and I heard it say..."></textarea>
