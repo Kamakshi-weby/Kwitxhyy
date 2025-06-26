@@ -346,10 +346,16 @@ body {
 }
 </style>
 </head>
-<body><!-- 🕷️ Spiderbar Trigger Button -->
-<div id="spiderToggle">🕷️</div>
+<body>
+    <section id="home">
+    <h2>Welcome to the Realm 🌒</h2>
+    <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
+  </section>  <section id="about" class="about">
+    <h2>About Me</h2>
+    <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
+    <p>I'm <st<!-- 🕷️ Toggle Button -->
 
-<!-- 🕸️ Creepy Slide-In Sidebar -->
+<!-- 🕸️ Spider Slide-In Menu -->
 <div id="spiderbar">
   <a href="#home">🏠 Home</a>
   <a href="#about">🕯️ About</a>
@@ -359,19 +365,12 @@ body {
   <a href="#echos">🔮 Echos</a>
   <a href="#playlist">🎵 Playlist</a>
   <a href="#adios">🌙 Adios</a>
-</div>
-    <section id="home">
-    <h2>Welcome to the Realm 🌒</h2>
-    <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
-  </section>  <section id="about" class="about">
-    <h2>About Me</h2>
-    <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
-    <p>I'm <strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
-  </section>  <section id="myself" class="myself">
+    </div><strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
+  </section> <div class="main-content"> <section id="myself" class="myself">
     <h2>This Witchy</h2>
     <img src="5A6ABF91B5E13A4E907FE5B2CDCA7C31F748AD45" alt="Myself image" class="small-img" />
     <p>Hi there! I'm Kamakshi and this is my first time creating a website where I blog and maybe live. About myself I'm 18 and I'm very much interested in gaming and doing nothing but also a little bit of coding. I love making friends, and in person I maybe an extrovert but I'm not much confident if you ask me but that's ok. That's how life works right!?. I might not be perfect and neither is this website but I hope y'all like it 😄. Thanks for being here. Toodles!</p>
-  </section>  <section id="blogs" class="blogs">
+  </section> </div><section id="blogs" class="blogs">
     <h2>Blogs</h2>
     <h3>Blog 1: 23/06/2025</h3>
     <p>Its been a rough day and while blaming god for everything that's happening in my life I realised what the actual problem was and so here I'm discussing about THE REAL PROBLEM......with this poem-----> There's nothing more important to me than to be... to live...to feel but still the question echoes: is it truly necessary? Alone without love, no tender care to cradle my heart, seeking souls to halt this solitude, but shadows chase me still, like demons dancing in the dark of my restless mind. The world once sparkled bright in solitary glow, but now I'm encircled by strangers whose hearts are void, each glance a dagger, every word a wound, they bury my hope deeper than any weapon can wound. Innocence was my shroud, believing in binds of closeness, convincing myself it’s me, that I’m the flaw, but no, no, no— I’m just a marionette, strings pulled for their delight, yet I’ve grown; perhaps my heart remains a timid child, screaming silently, longing to cry, longing to be whole, and still I know, the mirror reflects the problem within me, cause yes! the problem is me.....
