@@ -1,91 +1,126 @@
-<!DOCTYPE html><html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Chromaverse</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Chromaverse – Game Realm</title>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: linear-gradient(135deg, #f0f, #0ff, #ff0);
-      color: #222;
+      font-family: 'Press Start 2P', cursive;
+      background: url('https://i.imgur.com/o5uMfKo.png'); /* pixel pattern */
+      background-size: 30px 30px;
+      color: #fff;
       display: flex;
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-    }h1 {
-  margin-top: 2rem;
-  font-size: 3rem;
-  text-align: center;
-  color: white;
-  text-shadow: 2px 2px 5px #000;
-}
+    }
 
-.game-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-  margin: 3rem 1rem;
-  width: 100%;
-  max-width: 700px;
-}
+    h1 {
+      margin-top: 2rem;
+      font-size: 1.5rem;
+      text-align: center;
+      background: linear-gradient(90deg, #ff0, #0ff, #f0f);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 0 #000;
+    }
 
-.game-list a {
-  display: block;
-  width: 100%;
-  background: linear-gradient(to right, #ff66cc, #66ccff);
-  padding: 1rem;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  border-radius: 12px;
-  font-size: 1.2rem;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
+    .game-list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      margin: 2rem 1rem;
+      width: 100%;
+      max-width: 700px;
+      padding: 1rem;
+      background-color: rgba(0, 0, 0, 0.8);
+      border: 4px dashed #0ff;
+      border-radius: 16px;
+    }
 
-.game-list a:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
+    .game-list a {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: #111;
+      color: #0ff;
+      text-decoration: none;
+      border: 3px solid #0ff;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 10px #0ff, 0 0 20px #0ff inset;
+    }
 
-.adios-section {
-  margin-top: auto;
-  width: 100%;
-  background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
-  color: white;
-  text-align: center;
-  padding: 3rem 2rem;
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-shadow: 2px 2px 4px #000;
-}
+    .game-list a:hover {
+      background: #0ff;
+      color: #111;
+      box-shadow: 0 0 20px #fff;
+      transform: scale(1.05);
+    }
 
-.back-link {
-  display: inline-block;
-  margin-top: 2rem;
-  padding: 1rem 2rem;
-  background-color: black;
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  box-shadow: 0 0 15px white;
-}
+    .adios-section {
+      margin-top: 3rem;
+      width: 100%;
+      background: linear-gradient(90deg, #ff66cc, #6600ff, #00ccff);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 1rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 4px #000;
+      border-top: 5px double #fff;
+      border-bottom: 5px double #fff;
+    }
 
-.back-link:hover {
-  background: white;
-  color: black;
-  box-shadow: 0 0 20px #fff;
-}
+    .back-link {
+      display: inline-block;
+      margin: 2rem 0;
+      padding: 1rem 2rem;
+      background: black;
+      color: lime;
+      text-decoration: none;
+      font-size: 0.9rem;
+      border-radius: 10px;
+      border: 2px solid lime;
+      box-shadow: 0 0 12px lime;
+      transition: background 0.3s, transform 0.2s;
+    }
 
+    .back-link:hover {
+      background: lime;
+      color: black;
+      transform: scale(1.05);
+    }
+
+    @media (min-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .game-list a {
+        font-size: 1rem;
+      }
+
+      .adios-section {
+        font-size: 1.2rem;
+      }
+    }
   </style>
 </head>
 <body>
-  <h1>🌈 Welcome to The Chromaverse</h1>  <div class="game-list">
-    <a href="https://www.jopi.com/gam/summer-maze/" target="_blank">🎮 Summer Maze</a>
+  <h1>🎮 Welcome to The Chromaverse Arcade!</h1>
+
+  <div class="game-list">
+    <a href="https://www.jopi.com/gam/summer-maze/" target="_blank">🌴 Summer Maze</a>
     <a href="https://www.jopi.com/gam/key-quest/" target="_blank">🗝️ Key Quest</a>
     <a href="https://www.jopi.com/gam/painting-tiles/" target="_blank">🎨 Painting Tiles</a>
     <a href="https://www.jopi.com/gam/space-slide/" target="_blank">🚀 Space Slide</a>
@@ -96,10 +131,13 @@
     <a href="https://www.jopi.com/gam/neon-bricks/" target="_blank">🧱 Neon Bricks</a>
     <a href="https://www.jopi.com/gam/go-up-dash/" target="_blank">⬆️ Go Up Dash</a>
     <a href="https://spritted.com/embed/penguin-rescue-hero" target="_blank">🐧 Penguin Rescue Hero</a>
-  </div>  <div class="adios-section">
-    ✨ You've explored the realms of color and joy! <br>
-    🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖
-  </div><a class="back-link" href="index.html">👻 Back to the Spooky Realm</a>
+  </div>
 
+  <div class="adios-section">
+    🎆 You’ve conquered the arcade realms! <br>
+    🌈 Until your next power-up... stay retro, stay epic!
+  </div>
+
+  <a class="back-link" href="index.html">👾 Back to the Spooky Realm</a>
 </body>
 </html>
