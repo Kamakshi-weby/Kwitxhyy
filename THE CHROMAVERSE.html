@@ -1,159 +1,148 @@
-
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Chromaverse</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chromaverse</title>
   <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --lazy1: #97B3AE;
-      --lazy2: #D2E0D3;
-      --lazy3: #F0DDD6;
-      --lazy4: #F2C3B9;
-      --lazy5: #D6CBBF;
-      --dream1: #C8CEEE;
-      --dream2: #FCDCE1;
-      --dream3: #E8DAF0;
-      --text: #333;
-    }* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: 'Quicksand', sans-serif;
-  background: #fff;
-  color: var(--text);
-  line-height: 1.6;
-}
-
-header {
-  background: linear-gradient(135deg, var(--dream3), var(--dream2));
-  padding: 4rem 2rem 6rem;
-  border-bottom-left-radius: 100% 10%;
-  border-bottom-right-radius: 100% 10%;
+    body {
+      margin: 0;
+      font-family: 'Quicksand', sans-serif;
+      background: linear-gradient(to bottom right, #fcdce1, #e8daf0, #c8ceee);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }header {
+  background: linear-gradient(to right, #fcdce1, #e8daf0);
+  width: 100%;
+  padding: 2rem 1rem;
   text-align: center;
+  border-bottom-left-radius: 3rem;
+  border-bottom-right-radius: 3rem;
 }
 
 header h1 {
   font-family: 'Pacifico', cursive;
-  font-size: 3.5rem;
-  color: #6a4f93;
+  font-size: 3rem;
+  color: #7a52aa;
+  margin: 0;
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #444;
+  font-size: 1.3rem;
+  margin-top: 0.5rem;
 }
 
 .game-list {
+  background: linear-gradient(#d2e0d3, #f0ddd6);
+  width: 100%;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 4rem 1rem;
-  background: linear-gradient(180deg, var(--lazy1), var(--lazy2), var(--lazy4));
-}
-
-.game-btn {
-  background: rgba(255, 255, 255, 0.9);
-  border: none;
-  border-radius: 16px;
-  padding: 1rem 2rem;
-  margin: 1rem 0;
-  font-size: 1.2rem;
-  text-align: center;
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s ease;
-  cursor: pointer;
-  color: #333;
-  text-decoration: none;
-  width: 80%;
-  max-width: 500px;
-}
-
-.game-btn:hover {
-  transform: translateY(-3px);
-  background: white;
 }
 
 .game-container {
-  display: none;
-  padding: 2rem;
-  max-width: 960px;
-  margin: 0 auto;
+  background: #ffffffcc;
+  margin: 1rem 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 800px;
 }
 
-.active {
-  display: block !important;
+.game-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+iframe {
+  width: 100%;
+  height: 400px;
+  border: none;
+  border-radius: 1rem;
 }
 
 footer {
-  background: var(--dream1);
-  padding: 4rem 2rem;
+  background: linear-gradient(to right, #c8ceee, #e8daf0);
+  width: 100%;
+  padding: 3rem 1rem;
   text-align: center;
-  border-top-left-radius: 100% 10%;
-  border-top-right-radius: 100% 10%;
-}
-
-footer p {
   font-size: 1.1rem;
-  margin-bottom: 1rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  background-image: radial-gradient(circle at top left, #fcdce1, #c8ceee);
+  color: #4a3c68;
 }
 
-.back-btn {
-  background: #6a4f93;
-  color: white;
-  padding: 0.8rem 2rem;
-  border: none;
-  border-radius: 12px;
-  font-size: 1rem;
+.footer-button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  background: #ffffff;
+  border: 2px solid #7a52aa;
+  color: #7a52aa;
+  border-radius: 1rem;
   cursor: pointer;
-  transition: background 0.3s ease;
-}
-
-.back-btn:hover {
-  background: #563c80;
+  font-weight: bold;
 }
 
   </style>
 </head>
 <body>
   <header>
-    <h1>🎮 Welcome to the Chromaverse</h1>
+    <h1>Chromaverse</h1>
     <p>Explore magical mini games in pastel wonder!</p>
-  </header>  <section class="game-list active" id="home">
-    <button class="game-btn" onclick="showGame('summer-maze')">🌞 Summer Maze</button>
-    <button class="game-btn" onclick="showGame('key-quest')">🗝️ Key Quest</button>
-    <button class="game-btn" onclick="showGame('painting-tiles')">🎨 Painting Tiles</button>
-    <button class="game-btn" onclick="showGame('space-slide')">🚀 Space Slide</button>
-    <button class="game-btn" onclick="showGame('master-sudoku')">🧠 Master Sudoku</button>
-    <button class="game-btn" onclick="showGame('way-to-home')">🏡 Way to Home</button>
-    <button class="game-btn" onclick="showGame('paint-sponges')">🧽 Paint Sponges</button>
-    <button class="game-btn" onclick="showGame('pixel-mini-golf')">⛳ Pixel Mini Golf</button>
-    <button class="game-btn" onclick="showGame('neon-bricks')">🧱 Neon Bricks</button>
-    <button class="game-btn" onclick="showGame('go-up-dash')">⬆️ Go Up Dash</button>
-    <button class="game-btn" onclick="showGame('penguin-hero')">🐧 Penguin Rescue Hero</button>
-  </section>  <section class="game-container" id="summer-maze">
-    <h2>🌞 Summer Maze</h2>
-    <p>[Insert working maze game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <!-- Repeat for all game containers -->  <footer>
-    <p>✨ You've explored the realms of color and joy!</p>
-    <p>🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖</p>
-    <button class="back-btn" onclick="goToSpooky()">👻 Back to the Spooky Realm</button>
-  </footer>  <script>
-    function showGame(id) {
-      document.querySelector('#home').classList.remove('active');
-      document.querySelectorAll('.game-container').forEach(sec => sec.classList.remove('active'));
-      document.querySelector(`#${id}`).classList.add('active');
-    }
-    function goHome() {
-      document.querySelectorAll('.game-container').forEach(sec => sec.classList.remove('active'));
-      document.querySelector('#home').classList.add('active');
-    }
-    function goToSpooky() {
-      window.location.href = "spooky.html";
-    }
-  </script></body>
+  </header>  <section class="game-list">
+    <div class="game-container">
+      <div class="game-title">🌞 Summer Maze</div>
+      <iframe src="games/summer-maze/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🔑 Key Quest</div>
+      <iframe src="games/key-quest/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🎨 Painting Tiles</div>
+      <iframe src="games/painting-tiles/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🚀 Space Slide</div>
+      <iframe src="games/space-slide/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🧠 Master Sudoku</div>
+      <iframe src="games/master-sudoku/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🏡 Way to Home</div>
+      <iframe src="games/way-to-home/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🧽 Paint Sponges</div>
+      <iframe src="games/paint-sponges/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">⛳ Pixel Mini Golf</div>
+      <iframe src="games/pixel-mini-golf/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🧱 Neon Bricks</div>
+      <iframe src="games/neon-bricks/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">⬆ Go Up Dash</div>
+      <iframe src="games/go-up-dash/index.html"></iframe>
+    </div>
+    <div class="game-container">
+      <div class="game-title">🐧 Penguin Rescue Hero</div>
+      <iframe src="games/penguin-rescue/index.html"></iframe>
+    </div>
+  </section>  <footer>
+    ✨ You’ve explored the realms of color and joy! 🌈 Stay playful, stay magical! 💖
+    <br><br>
+    <button class="footer-button" onclick="location.href='spooky.html'">👻 Back to the Spooky Realm</button>
+  </footer>
+</body>
+  </html>
