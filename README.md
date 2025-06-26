@@ -3,6 +3,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>THE REALM</title>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
   <style>
     body {
   margin: 0;
@@ -572,6 +573,49 @@ body {
     width: 100px;
   }
 }
+.cursed-canvas-section {
+  background: url('https://i.ibb.co/9ng4Nyy/creepy-parchment.jpg') no-repeat center center;
+  background-size: cover;
+  padding: 2rem;
+  color: #ff0033;
+  font-family: 'Creepster', cursive;
+  text-align: center;
+}
+
+.cursed-canvas-section h2 {
+  font-size: 2.5rem;
+  color: #ff0033;
+  text-shadow: 0 0 10px #ff0033;
+}
+
+canvas {
+  border: 4px dashed #ff0033;
+  box-shadow: 0 0 25px #8b0000;
+  background-color: rgba(0, 0, 0, 0.6);
+  cursor: crosshair;
+  margin-top: 1rem;
+}
+
+.controls {
+  margin: 1rem auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.controls button {
+  background: #0e0e0e;
+  color: #ff0033;
+  border: 1px solid #ff0033;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 10px #ff0033;
+}
+
+.controls input[type=range] {
+  accent-color: #ff0033;
+}
 </style>
 </head>
 <body><nav class="main-navbar">
@@ -580,6 +624,7 @@ body {
     <li><a href="#about">📜 About</a></li>
     <li><a href="#myself">🧙‍♀️ Myself</a></li>
     <li><a href="#blogs">📚 Blogs</a></li>
+    <li><a href="#canvas">🖌️ Canvas</a></li>
     <li><a href="#games">🎮 Games</a></li>
     <li><a href="#playlist">🎵 Playlist</a></li>
     <li><a href="#adios">🌙 Adios</a></li>
@@ -782,6 +827,20 @@ And every day, I thank the universe that you’re mine.</p>
 
   </div>
   </div>
+  <section id="canvas" class="cursed-canvas-section">
+  <h2>🩸 Cursed Canvas</h2>
+
+  <div class="controls">
+    <label>
+      Blood Ink Size:
+      <input type="range" id="brushSize" min="1" max="20" value="5">
+    </label>
+    <button id="clear">Clear</button>
+    <button id="save">Save Drawing</button>
+  </div>
+
+  <canvas id="drawingCanvas" width="300" height="400"></canvas>
+</section>
 
   <section id="games" class="games">
     <h2>🕹️ Witchy Games</h2>
@@ -1048,5 +1107,43 @@ And every day, I thank the universe that you’re mine.</p>
 
   toggleBtn.addEventListener("click", () => {
     menu.classList.toggle("active");
+  });
+</script>
+<script>
+  const canvas = document.getElementById('drawingCanvas');
+  const ctx = canvas.getContext('2d');
+  let drawing = false;
+
+  canvas.addEventListener('mousedown', () => drawing = true);
+  canvas.addEventListener('mouseup', () => {
+    drawing = false;
+    ctx.beginPath(); // resets path to avoid sharp lines
+  });
+  canvas.addEventListener('mouseout', () => drawing = false);
+
+  canvas.addEventListener('mousemove', (e) => {
+    if (!drawing) return;
+    ctx.lineWidth = document.getElementById('brushSize').value;
+    ctx.lineCap = 'round';
+    ctx.strokeStyle = '#ff0033';
+    ctx.shadowColor = '#ff0033';
+    ctx.shadowBlur = 10;
+
+    ctx.lineTo(e.offsetX, e.offsetY);
+    ctx.stroke();
+    ctx.beginPath();
+    ctx.moveTo(e.offsetX, e.offsetY);
+  });
+
+  document.getElementById('clear').addEventListener('click', () => {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.beginPath();
+  });
+
+  document.getElementById('save').addEventListener('click', () => {
+    const link = document.createElement('a');
+    link.download = 'cursed_canvas.png';
+    link.href = canvas.toDataURL();
+    link.click();
   });
 </script>
