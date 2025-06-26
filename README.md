@@ -712,6 +712,66 @@ Maybe I was never meant
 to be anything
 but
 Temporary.</p>
+<h3>Blog 4: 26/06/2025</h3>
+    <p><bold>APOLOGIES</bold>----->I love you more than words can say,
+And even now, I feel that way.
+No matter what I've done or shown,
+This love in me has only grown.
+
+I hurt you — yes, I made you ache,
+But watching that was my own break.
+I'm sorry for the tears you cried,
+For every time I stepped aside.
+
+I'm sorry that I came your way,
+That I can't seem to make you stay.
+I'm sorry that I broke your trust,
+When all you wanted… was just us.
+
+But how can I explain my pain,
+The silent storms, the endless rain?
+The sleepless nights I cried for you,
+The things you did — you never knew.
+
+You don’t know how it felt inside,
+To fake a smile, to run and hide.
+To fight for you, to hold my breath,
+To guard your name till there was nothing left.
+
+I kept you far from them — I tried,
+But every time, a part of me died.
+'Cause seeing you with them in mind,
+Was torture of the cruelest kind.
+
+And maybe, love, they mattered more,
+Maybe that’s what you chose them for.
+But what you said — it left a scar,
+A wound I didn’t see, by far.
+
+Did you mean the words you threw?
+The ones I can't believe were true?
+I never thought they’d come from you…
+But now I know. I think I do.
+
+I’m sorry, baby — I can’t stay.
+I can’t pretend it’s all okay.
+I wish I could rewind it all,
+But love like this can't break the fall.
+
+I swear, I’ll never love again,
+The way I loved you through the end.
+But not this you — no, not today,
+I miss the one you were that day.
+
+The one who saw me — heart and soul,
+Who held me close and made me whole.
+That you is gone, and so must I…
+But not without a last goodbye.
+
+I’m sorry.
+But I have to go.
+I love you more
+Than you could know.</p>
 <section id="echos" class="echos-section">
   <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
   <article class="echo-entry">
