@@ -361,9 +361,84 @@ body {
     height: auto;
   }
 }
+/* Menu Toggle Button */
+#menuToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  background: #111;
+  color: #fff;
+  padding: 10px 15px;
+  cursor: pointer;
+  z-index: 1000;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-family: 'Creepster', cursive; /* Optional spooky font */
+}
+
+/* Hidden Menu */
+#spookyMenu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 200px;
+  height: 100%;
+  background-color: #1a1a1a;
+  color: white;
+  padding-top: 60px;
+  transition: left 0.3s ease;
+  z-index: 999;
+}
+
+/* Menu Items */
+#spookyMenu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#spookyMenu ul li {
+  padding: 15px;
+  text-align: left;
+}
+
+#spookyMenu ul li a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+#spookyMenu ul li a:hover {
+  color: #fff;
+}
+
+/* Active class to show menu */
+#spookyMenu.active {
+  left: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* This ensures no horizontal scroll from hidden elements */
+}
 </style>
 </head>
-<body>
+<body>  <!-- Spooky Menu Toggle Button -->
+<div id="menuToggle">☠️ Menu</div>
+
+<!-- Spooky Slide Menu -->
+<nav id="spookyMenu">
+  <ul>
+    <li><a href="#home">🏠 Home</a></li>
+    <li><a href="#about">📜 About</a></li>
+    <li><a href="#myself">🧙‍♀️ Myself</a></li>
+    <li><a href="#blogs">📚 Blogs</a></li>
+    <li><a href="#games">🎮 Games</a></li>
+    <li><a href="#playlist">🎵 Playlist</a></li>
+    <li><a href="#adios">🌙 Adios</a></li>
+  </ul>
+</nav>
     <section id="home">
     <h2>Welcome to the Realm 🌒</h2>
     <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
@@ -371,21 +446,9 @@ body {
     <h2>About Me</h2>
     <img src="file_0000000094d461f5a206b05a4e4ec2ed.png" alt="About image" class="small-img" />
     <p>I'm <st<!-- 🕷️ Toggle Button -->
+  
 
-<!-- 🕷️ Spider Toggle Button -->
-<div id="spiderToggle">🕷️</div>
-
-<!-- 🕸️ Spider Sidebar Menu -->
-<div id="spiderbar">
-  <a href="#home">🏠 Home</a>
-  <a href="#about">🕯️ About</a>
-  <a href="#myself">🧙 Myself</a>
-  <a href="#blogs">📜 Blogs</a>
-  <a href="#games">🧩 Games</a>
-  <a href="#echos">🔮 Echos</a>
-  <a href="#playlist">🎵 Playlist</a>
-  <a href="#adios">🌙 Adios</a>
-</div><strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
+<p>I'm<strong>Kamakshi</strong>, your local gaming witch coder ✨. I build magic through code, poems, and pain. This place is all me — haunting, healing, and hella fun.</p>
   </section> <div class="main-content"> <section id="myself" class="myself">
     <h2>This Witchy</h2>
     <img src="5A6ABF91B5E13A4E907FE5B2CDCA7C31F748AD45" alt="Myself image" class="small-img" />
@@ -814,10 +877,10 @@ Temporary.</p>
   }
 </script>
 <script>
-  const spiderToggle = document.getElementById('spiderToggle');
-  const spiderbar = document.getElementById('spiderbar');
+  const toggleBtn = document.getElementById("menuToggle");
+  const menu = document.getElementById("spookyMenu");
 
-  spiderToggle.addEventListener('click', () => {
-    spiderbar.classList.toggle('active');
+  toggleBtn.addEventListener("click", () => {
+    menu.classList.toggle("active");
   });
 </script>
