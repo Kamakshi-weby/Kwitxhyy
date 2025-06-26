@@ -712,8 +712,8 @@ Temporary.</p>
   <article class="echo-entry">
     <div class="echo-card">
   <div class="echo-text">
-    <h3>“She Spoke at Midnight”</h3>
-    <p><bold>My mom</bold>....She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
+    <h3>“MY MOM”</h3>
+    <p>She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
 
 She’s in her 50s now, a brilliant and respected Advocate by profession. But to me, she’s more than just a lawyer — she’s my inspiration, my definition of strength, and the woman I aspire to be like every single day.
 
