@@ -171,6 +171,7 @@
   50% { opacity: 0.8; }
   100% { opacity: 0; }
 }
+
 .vertical-nav {
   position: fixed;
   top: 0;
@@ -210,6 +211,7 @@
   text-shadow: 0 0 5px magenta;
   border-left: 4px solid violet;
 }
+
 body {
   margin-left: 180px; /* leaves room for vertical nav */
 }
@@ -293,7 +295,22 @@ body {
   border-left: 4px solid violet;
   font-style: italic;
 }
-
+body {
+  margin-left: 180px; /* same as your sidebar width */
+  background-color: black;
+  color: white;
+  font-family: 'Georgia', serif;
+}
+@media (max-width: 600px) {
+  body {
+    margin-left: 0;
+  }
+  .vertical-nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+}
 </style>
 </head>
 <body>
