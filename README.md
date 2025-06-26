@@ -534,6 +534,32 @@ body {
   margin-left: 10px;
   border-radius: 8px;
 }
+.echo-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #240031; /* your dark purple background */
+  padding: 15px;
+  border-radius: 16px;
+  box-shadow: 0 0 12px #ff4fff;
+  margin-bottom: 24px;
+}
+
+.echo-text {
+  flex: 1;
+  color: #ffffff;
+  font-family: 'Cursive', serif;
+  margin-right: 16px;
+}
+
+.echo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #ff99ff; /* cute pink border */
+  border-radius: 12px;
+  box-shadow: 0 0 8px #ff99ff;
+}
 </style>
 </head>
 <body><nav class="main-navbar">
@@ -675,7 +701,7 @@ Temporary.</p>
     <div class="echo-card">
   <div class="echo-text">
     <h3>“She Spoke at Midnight”</h3>
-    <p><bold>MY MOM</bold>......She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
+    <p><bold>My mom</bold>....She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
 
 She’s in her 50s now, a brilliant and respected Advocate by profession. But to me, she’s more than just a lawyer — she’s my inspiration, my definition of strength, and the woman I aspire to be like every single day.
 
@@ -696,7 +722,7 @@ She’s home.
 I love you so much, Mumma — more than words could ever explain.
 And every day, I thank the universe that you’re mine.</p>
   </div>
-  <img src="1750922400502.webp" alt="ghost icon" class="echo-img">
+  <img src="1750922400502.webp" alt="Spooky spirit" class="echo-img">
 </div>
 
   
