@@ -15,49 +15,107 @@
       --dream2: #FCDCE1;
       --dream3: #E8DAF0;
       --text: #333;
-    }
-    * { box-sizing: border-box; padding: 0; margin: 0; }
-    body {
-      font-family: 'Quicksand', sans-serif;
-      background: linear-gradient(to bottom right, var(--lazy1), var(--dream1), var(--dream3));
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header { text-align: center; padding: 2rem 1rem; }
-    header h1 {
-      font-family: 'Pacifico', cursive;
-      font-size: 3rem;
-      color: #6a4f93;
-    }
-    .game-list, .game-container { display: none; padding: 2rem; max-width: 960px; margin: auto; width: 100%; }
-    .active { display: block !important; }
-    .game-btn {
-      background: rgba(255, 255, 255, 0.8);
-      border: none;
-      border-radius: 16px;
-      padding: 1rem;
-      font-size: 1.1rem;
-      text-align: center;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      transition: transform 0.2s ease;
-      cursor: pointer;
-      color: #333;
-      text-decoration: none;
-      margin-bottom: 1rem;
-    }
-    .game-btn:hover {
-      transform: scale(1.05);
-      background: rgba(255, 255, 255, 1);
-    }
-    footer {
-      margin-top: auto;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      background: rgba(255, 255, 255, 0.6);
-    }
+    }* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  background: #fff;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header {
+  background: linear-gradient(135deg, var(--dream3), var(--dream2));
+  padding: 4rem 2rem 6rem;
+  border-bottom-left-radius: 100% 10%;
+  border-bottom-right-radius: 100% 10%;
+  text-align: center;
+}
+
+header h1 {
+  font-family: 'Pacifico', cursive;
+  font-size: 3.5rem;
+  color: #6a4f93;
+}
+
+header p {
+  font-size: 1.2rem;
+  color: #444;
+}
+
+.game-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 1rem;
+  background: linear-gradient(180deg, var(--lazy1), var(--lazy2), var(--lazy4));
+}
+
+.game-btn {
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  border-radius: 16px;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+  text-align: center;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  cursor: pointer;
+  color: #333;
+  text-decoration: none;
+  width: 80%;
+  max-width: 500px;
+}
+
+.game-btn:hover {
+  transform: translateY(-3px);
+  background: white;
+}
+
+.game-container {
+  display: none;
+  padding: 2rem;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.active {
+  display: block !important;
+}
+
+footer {
+  background: var(--dream1);
+  padding: 4rem 2rem;
+  text-align: center;
+  border-top-left-radius: 100% 10%;
+  border-top-right-radius: 100% 10%;
+}
+
+footer p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.back-btn {
+  background: #6a4f93;
+  color: white;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #563c80;
+}
+
   </style>
 </head>
 <body>
@@ -81,58 +139,10 @@
     <p>[Insert working maze game code here]</p>
     <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
   </section>
-  <section class="game-container" id="key-quest">
-    <h2>🗝️ Key Quest</h2>
-    <p>[Insert working key quest game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="painting-tiles">
-    <h2>🎨 Painting Tiles</h2>
-    <p>[Insert working painting tiles game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="space-slide">
-    <h2>🚀 Space Slide</h2>
-    <p>[Insert working space slide game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="master-sudoku">
-    <h2>🧠 Master Sudoku</h2>
-    <p>[Insert working sudoku game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="way-to-home">
-    <h2>🏡 Way to Home</h2>
-    <p>[Insert working way to home game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="paint-sponges">
-    <h2>🧽 Paint Sponges</h2>
-    <p>[Insert working paint sponges game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="pixel-mini-golf">
-    <h2>⛳ Pixel Mini Golf</h2>
-    <p>[Insert working mini golf game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="neon-bricks">
-    <h2>🧱 Neon Bricks</h2>
-    <p>[Insert working neon bricks game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="go-up-dash">
-    <h2>⬆️ Go Up Dash</h2>
-    <p>[Insert working go up dash game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>
-  <section class="game-container" id="penguin-hero">
-    <h2>🐧 Penguin Rescue Hero</h2>
-    <p>[Insert working penguin rescue game code here]</p>
-    <button class="game-btn" onclick="goHome()">🔙 Back to Home</button>
-  </section>  <footer>
-    ✨ You've explored the realms of color and joy!<br>
-    🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖
+  <!-- Repeat for all game containers -->  <footer>
+    <p>✨ You've explored the realms of color and joy!</p>
+    <p>🌟 Until our next vivid adventure — stay playful, stay magical! 🌈💖</p>
+    <button class="back-btn" onclick="goToSpooky()">👻 Back to the Spooky Realm</button>
   </footer>  <script>
     function showGame(id) {
       document.querySelector('#home').classList.remove('active');
@@ -143,5 +153,7 @@
       document.querySelectorAll('.game-container').forEach(sec => sec.classList.remove('active'));
       document.querySelector('#home').classList.add('active');
     }
+    function goToSpooky() {
+      window.location.href = "spooky.html";
+    }
   </script></body>
-  </html>
