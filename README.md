@@ -747,7 +747,7 @@ And every day, I thank the universe that you’re mine.</p>
 <div id="userEchos" class="user-echos">
   <h3>🔮 Other Echos</h3>
 </div>
-</section>
+
  <section id="mirror" class="spooky-mirror">
   <h2 class="spooky-heading">🪞 Haunted Mirror</h2>
   <p id="mirrorMessage">Peer into the mirror... what do you seek?</p>
