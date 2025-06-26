@@ -172,44 +172,60 @@
   100% { opacity: 0; }
 }
 
-.vertical-nav {
+/* 🕷️ Toggle button */
+#spiderToggle {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 1001;
+  color: red;
+  animation: pulse 2s infinite;
+}
+
+/* 🕸️ Spiderbar Styles */
+#spiderbar {
   position: fixed;
   top: 0;
-  left: 0;
-  height: 100vh;
-  width: 180px;
-  background-color: #0b0019;
-  padding-top: 40px;
+  left: -220px;
+  width: 200px;
+  height: 100%;
+  background-color: #0a0015;
+  padding-top: 60px;
+  box-shadow: 4px 0 10px #800080;
+  transition: left 0.5s ease;
   z-index: 1000;
-  box-shadow: 4px 0 10px rgba(0, 0, 0, 0.7);
 }
 
-.vertical-nav ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.vertical-nav ul li {
-  margin: 20px 0;
-  text-align: center;
-}
-
-.vertical-nav ul li a {
+#spiderbar a {
+  display: block;
   color: violet;
+  padding: 14px;
+  font-size: 18px;
   text-decoration: none;
   font-family: 'Creepster', cursive;
-  font-size: 18px;
-  display: block;
-  padding: 10px;
-  transition: background 0.3s;
+  text-align: center;
+  transition: 0.3s;
 }
 
-.vertical-nav ul li a:hover {
-  background-color: #1e0033;
+#spiderbar a:hover {
+  background: black;
   color: white;
   text-shadow: 0 0 5px magenta;
-  border-left: 4px solid violet;
+  transform: scale(1.1);
+}
+
+/* Show menu when active */
+#spiderbar.active {
+  left: 0;
+}
+
+/* Creepy pulse animation */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); color: #ff00ff; }
+  100% { transform: scale(1); }
 }
 
 body {
@@ -305,7 +321,7 @@ body {
   body {
     margin-left: 0;
   }
-  .vertical-nav {
+  .vertical-nav {uu
     position: relative;
     width: 100%;
     height: auto;
@@ -313,19 +329,21 @@ body {
 }
 </style>
 </head>
-<body>
-  <nav class="vertical-nav">
-  <ul>
-    <li><a href="#home">🏠 Home</a></li>
-    <li><a href="#about">🕯️ About</a></li>
-    <li><a href="#myself">🧙‍♀️ Myself</a></li>
-    <li><a href="#blogs">📜 Blogs</a></li>
-    <li><a href="#games">🧩 Games</a></li>
-    <li><a href="#echos">🫧 Echos</a></li>
-    <li><a href="#playlist">🎶 Playlist</a></li>
-    <li><a href="#adios">🔮 Adios</a></li>
-  </ul>
-  </nav>  <section id="home">
+<body><!-- 🕷️ Spiderbar Trigger Button -->
+<div id="spiderToggle">🕷️</div>
+
+<!-- 🕸️ Creepy Slide-In Sidebar -->
+<div id="spiderbar">
+  <a href="#home">🏠 Home</a>
+  <a href="#about">🕯️ About</a>
+  <a href="#myself">🧙 Myself</a>
+  <a href="#blogs">📜 Blogs</a>
+  <a href="#games">🧩 Games</a>
+  <a href="#echos">🔮 Echos</a>
+  <a href="#playlist">🎵 Playlist</a>
+  <a href="#adios">🌙 Adios</a>
+</div>
+    <section id="home">
     <h2>Welcome to the Realm 🌒</h2>
     <p>Step into a space of magic, mystery, and fun. Welcome to my ghosty-cool web realm!</p>
   </section>  <section id="about" class="about">
@@ -758,4 +776,12 @@ Temporary.</p>
 
     document.getElementById("userStory").value = "";
   }
+</script>
+<script>
+  const spiderToggle = document.getElementById('spiderToggle');
+  const spiderbar = document.getElementById('spiderbar');
+
+  spiderToggle.addEventListener('click', () => {
+    spiderbar.classList.toggle('active');
+  });
 </script>
