@@ -772,6 +772,151 @@ I’m sorry.
 But I have to go.
 I love you more
 Than you could know.</p>
+<h3>Blog 5: 27/06/2025</h3>
+<p>I knew this would happen from the day we met kyuki jo kismat me hota hai usko badal nhi sakte 
+"WANNA BE HER"---> Where did you go?
+Where did it die —
+The love in your voice,
+The light in your eye?
+
+You once said I mattered.
+You once held me close.
+Now I’m just
+A ghost you chose.
+
+You changed.
+Or maybe I just saw
+That your love for me
+Was never raw.
+
+I made mistakes —
+But not with intent.
+While you made choices
+That left me bent.
+
+You didn’t leave —
+You let me bleed.
+And filled her cup
+With all I need.
+
+You gave her laughs,
+You gave her light,
+While I cried alone
+Night after night.
+
+Was I not enough?
+You said you loved talking to me —
+But you smiled
+Because of her, not me.
+
+Did you ever smile
+Reading my texts?
+Or was I just
+A name to forget?
+
+Did I look that awful
+In your mind?
+That I was never
+The love you'd find?
+
+Did I not give you
+Enough love?
+Did my lips not taste
+Good enough?
+
+Was my skin
+Not soft or smooth?
+Was I never
+Your kind of truth?
+
+Did I not make you happy?
+Did I never bring you light?
+Or did I just hold you
+Too damn tight?
+
+Because I failed.
+I just failed.
+I’m so sorry…
+I failed.
+
+And now —
+I want to die.
+I want the ache
+To say goodbye.
+
+I can’t stop thinking
+Of killing this pain,
+Of silencing thoughts
+That scream your name.
+
+I can’t stop thinking
+Of her — again, again.
+What did she have
+That I didn’t contain?
+
+Please tell me.
+Please… just tell me.
+Why not me?
+Why never me?
+
+
+You made me hate
+My every breath,
+You turned self-love
+Into a death.
+
+You made me cheap,
+You made me doubt,
+Until I couldn't
+Climb back out.
+
+You praised her eyes,
+Her words, her smile,
+And never noticed
+Me all the while.
+
+You never said
+I was divine.
+You never said
+"You’re truly mine."
+
+I tried to mold,
+To shift, to break —
+To be the one
+You’d never fake.
+
+But you were gone
+Long before,
+And I just begged
+For something more.
+
+And so I pray —
+Dear God above,
+If you won’t give me
+Back his love…
+
+Then please,
+Please make me her.
+I just want to be
+The girl he preferred.
+
+I don’t want to be me —
+Not this mistake.
+Not this mess
+He chose to break.
+
+Turn me into
+The one he smiled for,
+The one he saw
+And needed more.
+
+Please, God…
+
+Let me be her.
+Just her.
+Only her.
+
+Because I don’t want to be me anymore. </p>
 <section id="echos" class="echos-section">
   <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
   <article class="echo-entry">
