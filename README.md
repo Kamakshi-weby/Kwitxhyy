@@ -607,10 +607,10 @@ body {
   </section> </div><section id="blogs" class="blogs">
     <h2>Blogs</h2>
     <h3>Blog 1: 23/06/2025</h3>
-    <p>Its been a rough day and while blaming god for everything that's happening in my life I realised what the actual problem was and so here I'm discussing about THE REAL PROBLEM......with this poem-----> There's nothing more important to me than to be... to live...to feel but still the question echoes: is it truly necessary? Alone without love, no tender care to cradle my heart, seeking souls to halt this solitude, but shadows chase me still, like demons dancing in the dark of my restless mind. The world once sparkled bright in solitary glow, but now I'm encircled by strangers whose hearts are void, each glance a dagger, every word a wound, they bury my hope deeper than any weapon can wound. Innocence was my shroud, believing in binds of closeness, convincing myself it’s me, that I’m the flaw, but no, no, no— I’m just a marionette, strings pulled for their delight, yet I’ve grown; perhaps my heart remains a timid child, screaming silently, longing to cry, longing to be whole, and still I know, the mirror reflects the problem within me, cause yes! the problem is me.....
+    <p>"THE REAL PROBLEM"-----> There's nothing more important to me than to be... to live...to feel but still the question echoes: is it truly necessary? Alone without love, no tender care to cradle my heart, seeking souls to halt this solitude, but shadows chase me still, like demons dancing in the dark of my restless mind. The world once sparkled bright in solitary glow, but now I'm encircled by strangers whose hearts are void, each glance a dagger, every word a wound, they bury my hope deeper than any weapon can wound. Innocence was my shroud, believing in binds of closeness, convincing myself it’s me, that I’m the flaw, but no, no, no— I’m just a marionette, strings pulled for their delight, yet I’ve grown; perhaps my heart remains a timid child, screaming silently, longing to cry, longing to be whole, and still I know, the mirror reflects the problem within me, cause yes! the problem is me.....
 </p>
     <h3>Blog 2: 24/06/2025</h3>
-    <p>I've been realising lately that everything I do will never be enough or maybe...... I'M NOT ACTUALLY DOING ENOUGH------>
+    <p> "I'M NOT ACTUALLY DOING ENOUGH"------>
 
 Crying in silence, running through pain, Screaming inside like a voice in the rain. I've given my all, done more than I could, Yet still I'm unseen, misunderstood.
 
@@ -917,6 +917,137 @@ Just her.
 Only her.
 
 Because I don’t want to be me anymore. </p>
+<h3>Blog 6: 10/07/2025</h3>
+<p>"MY SUNSHINE"
+
+He was unexpected —
+a quiet entrance,
+not with thunder or noise,
+but with the soft kind of presence
+that makes even silence feel full.
+
+He just walked into the room,
+a stranger in form,
+but somehow,
+his laughter fit in my world
+like it had always belonged.
+We laughed —
+not the forced kind,
+but the belly-deep,
+eyes-closed,
+soul-light kind of laughter.
+
+We talked —
+long and slow,
+like two stars learning each other's glow,
+tracing constellations through conversation,
+and slowly
+I forgot what loneliness felt like.
+
+We sang songs together,
+melodies drifting through the quiet air —
+"Is this the place we used to love?
+Is this the place that I've been dreaming of?
+Oh, simple things, where have you gone?
+I'm getting tired, and I need someone to rely on..."
+
+And in that song,
+something clicked.
+Because for the first time,
+I had someone to rely on.
+Not just to listen —
+but to stay.
+To really stay.
+
+Who knew
+that a single day,
+a single meeting,
+a single voice
+could bring so much light?
+
+He became my favorite part of midnight —
+each evening painted in shades of his words,
+and every “good night”
+carried the weight of a new beginning.
+Talking to him
+was like watching the stars multiply —
+brighter and brighter
+until the sky no longer felt empty.
+
+His face became a memory
+I replayed with awe.
+His smile —
+a language my heart fluently spoke.
+His eyes —
+full of unsaid poetry.
+And his tears?
+They never lied.
+They held the kind of honesty
+only real souls know how to carry.
+
+He wasn’t just sweet —
+he was softness wrapped in strength,
+patience dressed in laughter,
+kindness that didn't need to be loud
+to be felt.
+
+Oh, how could I not fall?
+
+How could I not fall
+for the boy
+who brought spring into my winter,
+who knew how to pull sunlight
+from my shadows?
+
+He changed me.
+Not with grand gestures,
+but with quiet, consistent love.
+He made my life
+feel like mine again —
+but brighter, fuller, better.
+He gifted me happiness
+I didn’t even know I was missing.
+
+Even when the world felt too heavy,
+he was there —
+steady, soft, unshaken.
+When my chest was full of storms,
+his voice
+was the calm that found the eye.
+
+He didn’t just walk with me
+through the hard times —
+he made them feel
+less like battles
+and more like lessons
+we survived together.
+
+He became
+my reason to keep going,
+my peace in chaos,
+my quiet in noise.
+
+He became my smile.
+My softness.
+My safe place.
+
+I love you —
+not just for what you do,
+but for who you are.
+For being the light
+that doesn’t burn,
+but warms.
+
+I love you,
+my sunshine,
+for being the one
+who found me
+when I didn’t even know I was lost.
+
+And loved me
+until I remembered
+how to love myself again.</p>
+
 <section id="echos" class="echos-section">
   <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
   <article class="echo-entry">
