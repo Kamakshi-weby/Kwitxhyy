@@ -773,8 +773,7 @@ But I have to go.
 I love you more
 Than you could know.</p>
 <h3>Blog 5: 27/06/2025</h3>
-<p>I knew this would happen from the day we met kyuki jo kismat me hota hai usko badal nhi sakte 
-"WANNA BE HER"---> Where did you go?
+<p>"WANNA BE HER"---> Where did you go?
 Where did it die —
 The love in your voice,
 The light in your eye?
