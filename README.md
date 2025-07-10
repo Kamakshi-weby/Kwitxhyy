@@ -1049,33 +1049,7 @@ how to love myself again.</p>
 
 <section id="echos" class="echos-section">
   <h2 class="spooky-heading">🫧 Echos from Beyond</h2>
-  <article class="echo-entry">
-    <div class="echo-card">
-  <div class="echo-text">
-    <h3>“MY MOM”</h3>
-    <p>She has truly been the most precious gift I’ve ever received from God. And as I’ve grown, I’ve come to realize something that words can barely capture — no one, absolutely no one, can love me the way she does.
-
-She’s in her 50s now, a brilliant and respected Advocate by profession. But to me, she’s more than just a lawyer — she’s my inspiration, my definition of strength, and the woman I aspire to be like every single day.
-
-Not because she is my mother-but it’s the way she carries herself, her grace under pressure, and her ability to balance power with gentleness that leaves me in awe.
-
-She wakes up early, gets everything at home running, and then drives off to her workplace to manage things there. She handles everything so smooth and makes difficult things so easy and still — after a long, exhausting day — she returns home and cooks the most comforting, delicious food you could ever imagine.
-
-But more than all of that… it’s her love. Her endless, unconditional love.
-The kind that heals me.
-The kind that protects me.
-The kind that no one else in this world can match.
-
-She’s not just my mom.
-She’s my strength.
-She’s my soft place to fall.
-She’s home.
-
-I love you so much, Mumma — more than words could ever explain.
-And every day, I thank the universe that you’re mine.</p>
-  </div>
-  <img src="1750922400502.webp" alt="Spooky spirit" class="echo-img">
-</div>
+  
 
   
 <div id="echo-submission" class="echo-form">
